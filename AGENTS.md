@@ -5,35 +5,24 @@ Project instructions for future Codex runs in this repository.
 ## Project Goal
 
 Build the new IBL-Core website as a Hugo static site, using modern vanilla HTML/CSS and minimal vanilla JS.  
-Primary short-term goal: translate `docs/landing-prototype.png` into reusable templates/components and align with `docs/sitemap-v1.md`.
+Primary short-term goal: implement the site from `docs/sitemap-v1.md` using reusable templates/components.
 
 ## Source of Truth
 
-1. `docs/sitemap-v1.md` (IA, page scope, implementation direction)
+1. `docs/sitemap-v1.md` (single source of truth for IA, page scope, and implementation direction)
 2. `docs/brainstorming.md` (strategy context)
-3. `docs/landing-prototype.png` (visual baseline for landing page)
+3. `docs/landing-prototype.webp` (legacy reference only; may be outdated)
 
 When in conflict, follow the sitemap decisions unless the user explicitly revises them.
 
-## Locked IA Decisions (v1)
+## IA Rule
 
-- Top nav:
-  1. Home
-  2. About
-  3. Resources
-  4. Projects & Partners
-  5. Publications
-  6. Join Us
-  7. News
-  8. Contact
-- `About` contains Team + FAQ + Governance & Policies.
-- `News` contains Events + Press.
-- `Resources` contains Data/Software/Hardware only.
-- Tutorials/docs must be attached to Data, Software, or Hardware.
-- `Projects & Partners` remains one combined section/page.
-- `Join Us` is careers-first, with partner redirect to Projects & Partners.
-- Funders/support appears on home/footer only.
-- No persistent global CTA in header for now.
+Do not restate or reinterpret the sitemap in this file. Use `docs/sitemap-v1.md` directly for:
+- top navigation
+- page and section names
+- content scope
+- content hierarchy
+- Hugo content structure decisions
 
 ## Implementation Constraints
 
@@ -45,7 +34,7 @@ When in conflict, follow the sitemap decisions unless the user explicitly revise
 
 ## Design and Porting Workflow
 
-When porting the PNG prototype:
+When implementing from the sitemap:
 1. Break the page into sections (header, hero, intro, resources, news, funders, footer).
 2. Implement semantic HTML first.
 3. Implement layout and spacing.
@@ -56,14 +45,7 @@ Avoid pixel-perfect overfitting that makes templates hard to maintain.
 
 ## Content and Migration Workflow
 
-- Prioritize migration in this order:
-  1. Resources
-  2. Projects & Partners
-  3. Publications
-  4. About
-  5. Join Us
-  6. News
-  7. Contact
+- Follow the migration priorities and section mapping defined in `docs/sitemap-v1.md`.
 - Keep copy concise and scannable.
 - Keep partner and career paths clear and separate in messaging.
 
@@ -82,4 +64,3 @@ Avoid pixel-perfect overfitting that makes templates hard to maintain.
 - Use ASCII unless existing files require Unicode.
 - Prefer small, reviewable commits/patches.
 - Run lightweight checks/build commands when available before finishing.
-

@@ -1,9 +1,9 @@
 # IBL-Core Website Sitemap v1
 
-Status: Working baseline aligned with `docs/landing-prototype.png` and current brainstorming decisions.
+Status: Working baseline aligned with `docs/landing-prototype.webp` and current brainstorming decisions.
 Intended stack: Hugo static site generator, modern vanilla HTML/CSS, minimal vanilla JS.
 
-## 1) Top-Level Navigation
+## 1. Top-Level Navigation
 
 1. Home (`/`)
 2. About (`/about/`)
@@ -13,12 +13,9 @@ Intended stack: Hugo static site generator, modern vanilla HTML/CSS, minimal van
 6. Events (`/events/`)
 7. News (`/news/`)
 
-## 2) Information Architecture (Detailed)
+## 2. Information Architecture (Detailed)
 
 ### 2.1 Home (`/`)
-Purpose:
-- Communicate IBL-Core identity and mission quickly.
-- Drive users to key sections without forcing a CTA-heavy layout.
 
 Sections:
 - Hero (prototype-like, mostly informational)
@@ -33,81 +30,89 @@ Notes:
 - No persistent top-right CTA in header for v1.
 
 ### 2.2 About (`/about/`)
-1. Mission and History
-2. Team
-3. Governance, policies
-4. FAQ - general explanation of IBL Core
-5. Join our Core Team
-6. Contact us
+
+Includes:
+- Mission and History
+- Team
+- Governance, policies
+- FAQ - general explanation of IBL Core
+- Join our Core Team
+- Contact us
 
 ### 2.3 Resources (`/resources/`)
 
 - Modalities
-    - Neuropixels
-        - Chronic Neuropixels
-        - Spike sorting
-        - Surgical Protocols
-        - IBL ephys rig
-    - Mesoscope
-    - Fiberphotometry
-    - Widefield
-    - Behavior
-        - IBL behaviour rig
-    - Video
+  - Neuropixels
+    - Chronic Neuropixels
+    - Spike sorting
+    - Surgical Protocols
+    - IBL ephys rig
+  - Mesoscope
+  - Fiberphotometry
+  - Widefield
+  - Behavior
+    - IBL behaviour rig
+  - Video
 - Visualisation
-    - Datoviz
-    - Website renderer
+  - Datoviz
+  - Website renderer
 - Data analysis packages
-    - Brainbox
-    - Model of Zoe
+  - Brainbox
+  - Model of Zoe
 - Datasets
-    - Brainwide map — within it, access + colab tutorials
-    - Other flagship datasets
-    - Personal project datasets
+  - Brainwide map — within it, access + colab tutorials
+  - Other flagship datasets
+  - Personal project datasets
 
-### 2.4 Projects & Partners (`/projects-partners/`)
+### 2.4 Projects (`/projects/`)
 
-1. List of projects ongoing
-2. Apply to become a partner
-    1. FAQ to become partner - take from https://www.internationalbrainlab.com/ibl-core-apply
+Includes:
+- List of projects ongoing
+- Apply to become a partner
+  - FAQ to become partner - take from https://www.internationalbrainlab.com/ibl-core-apply
 
 ### 2.5 Publications (`/publications/`)
 
-1. Our publication papers
-    1. Button to link to publication IBL 1.0 https://www.internationalbrainlab.com/publications
-2. Press
-
+Includes:
+- Our publication papers
+  - Button to link to publication IBL 1.0 https://www.internationalbrainlab.com/publications
+- Press
 
 ### 2.6 Events
-1 page, no subtabs; Upcoming events with dates, locations, information
+
+Format:
+- 1 page, no subtabs
+
+Includes:
+- Upcoming events with dates, locations, information
 
 ### 2.7 News (`/news/`)
-Purpose:
-- Time-based updates and public-facing activity.
 
 Includes:
 - News updates
 - Events
 - Press
 
+## 3. Hugo Content Model (Suggested)
 
-## 3) Hugo Content Model (Suggested)
-
-## 3.1 Sections
+### 3.1 Sections
 
 Use one Hugo section per top-level nav item:
 - `content/about/`
 - `content/resources/`
-- `content/projects-partners/`
+- `content/projects/`
 - `content/publications/`
-- `content/join-us/`
+- `content/events/`
 - `content/news/`
-- `content/contact/`
 
 Home:
 - `content/_index.md`
 
-## 3.2 Example File Tree
+Standalone pages nested under About:
+- `content/about/join-us.md`
+- `content/about/contact.md`
+
+### 3.2 Example File Tree
 
 ```text
 content/
@@ -118,35 +123,33 @@ content/
     team.md
     governance-policies.md
     faq.md
+    join-us.md
+    contact.md
   resources/
     _index.md
     data.md
     software.md
     hardware.md
-  projects-partners/
+  projects/
     _index.md
   publications/
     _index.md
-  join-us/
+  events/
     _index.md
-    open-roles.md
-    talent-pool.md
   news/
     _index.md
     posts/
       2026-03-example-update.md
-  contact/
-    _index.md
 ```
 
-## 3.3 Archetypes (Minimal set)
+### 3.3 Archetypes (Minimal set)
 
 Add archetypes for repeatable content:
 - `archetypes/news.md`
 - `archetypes/project.md` (if project entries become individual pages later)
 - `archetypes/publication.md` (if publications become structured entries)
 
-## 4) Template Strategy (Design + Reuse)
+## 4. Template Strategy (Design + Reuse)
 
 Build a small set of reusable Hugo layouts:
 
@@ -163,7 +166,7 @@ Generic content page should provide:
 - Main rich content body
 - Optional side navigation for subsections
 
-## 5) CSS/JS Architecture (Vanilla-first)
+## 5. CSS/JS Architecture (Vanilla-first)
 
 CSS approach:
 - `assets/css/tokens.css` (color, spacing, typography variables)
@@ -179,10 +182,10 @@ JS approach (minimal):
 
 Avoid JS frameworks unless a hard requirement appears.
 
-## 6) Porting Plan: PNG -> HTML/CSS
+## 6. Porting Plan: PNG -> HTML/CSS
 
 Goal:
-- Translate `docs/landing-prototype.png` into maintainable components, not pixel-locked one-off code.
+- Translate `docs/landing-prototype.webp` into maintainable components, not pixel-locked one-off code.
 
 Method:
 1. Identify visual blocks in prototype:
@@ -192,7 +195,7 @@ Method:
 4. Refine details in a second pass (icons, gradients, card radii, hover states).
 5. Keep responsive behavior explicit (desktop + mobile breakpoints early).
 
-## 7) LLM/Codex-Heavy Workflow
+## 7. LLM/Codex-Heavy Workflow
 
 To maximize LLM-assisted execution:
 
@@ -212,7 +215,7 @@ Recommended order:
 4. Generic content template
 5. Section pages populated from markdown
 
-## 8) Editorial and Migration Checklist
+## 8. Editorial and Migration Checklist
 
 From old site -> new site:
 
@@ -223,7 +226,7 @@ Port first:
 - Team and core about content
 
 Then reframe:
-- Old IBL-Core section content redistributed into About/Projects & Partners/Join Us.
+- Old IBL-Core section content redistributed into About/Projects/Join Us.
 - Press into News.
 
 Validation checks:
@@ -232,13 +235,13 @@ Validation checks:
 - Contact paths work (form + direct channels).
 - News taxonomy supports both events and press tags.
 
-## 9) Open Decisions for v2
+## 9. Open Decisions for v2
 
-- Whether to split Projects & Partners into entries later (still one combined page in nav).
+- Whether to split Projects into individual entries later.
 - Publication data source (manual markdown vs external bib/JSON import).
 - Analytics method for tool usage feedback (form/poll design).
 
-## 10) Execution Next Steps (Practical)
+## 10. Execution Next Steps (Practical)
 
 1. Scaffold Hugo baseline:
    - `hugo.toml`
