@@ -1,75 +1,94 @@
 # IBL-Core Website
 
-This repository contains the new IBL-Core public website work.
+Hugo site for the new IBL-Core public website.
 
-Current phase:
-- Hugo baseline scaffolded
-- Sitemap-led content placeholders in markdown
-- Minimal provisional templates, CSS, and JS ready for later design work
+## Source Of Truth
 
-## Core Docs
-
-- Single source of truth for IA, page scope, and implementation direction: [`docs/sitemap-v1.md`](docs/sitemap-v1.md)
-- Brainstorm notes: [`docs/brainstorming.md`](docs/brainstorming.md)
-- Legacy visual reference only: [`docs/landing-prototype.webp`](docs/landing-prototype.webp)
-
-## Working Rule
-
-Follow [`docs/sitemap-v1.md`](docs/sitemap-v1.md) exactly for:
-- top-level navigation
-- page scope and section contents
-- Hugo content model
+Use [docs/sitemap-v1.md](docs/sitemap-v1.md) as the canonical reference for:
+- navigation
+- page scope
+- section hierarchy
+- Hugo content structure
 - migration priorities
 
-If another doc conflicts with the sitemap, the sitemap wins until it is updated.
+Supporting docs:
+- [docs/brainstorming.md](docs/brainstorming.md) for strategy context
+- [docs/landing-prototype.webp](docs/landing-prototype.webp) as a legacy visual reference only
 
-## Tech Direction
+If another document conflicts with the sitemap, update the sitemap first or follow the sitemap as-is.
 
-- Static generator: Hugo
-- Frontend: modern vanilla HTML/CSS with minimal vanilla JS
-- Preferred implementation style: reusable partials/components, no framework lock-in
+## Current State
 
-## Repository Status
-
-Implemented on March 9, 2026:
-- `hugo.yaml` site config with top-level navigation
+Implemented:
+- Hugo config in `hugo.yaml`
 - Hugo-native structure in `content/`, `layouts/`, `assets/`, and `archetypes/`
-- Reusable shared templates: base layout, header, footer, section list, generic single page
-- Minimal home page shell with placeholder hero, resource cards, news preview, and funders strip
-- Markdown stubs for all top-level sections and key About subpages
-- `Justfile` commands for build, serve, test preview, cleanup, content creation, and basic maintenance
+- Shared base templates for home, list, and single pages
+- Minimal placeholder styling and mobile nav toggle
+- Markdown stubs for top-level sections and key About/Resources pages
+- `Justfile` commands for local development and maintenance
 
 Not implemented yet:
-- Final visual design and responsive polish
-- Real migrated content
-- Deployment workflow
-- Search, forms, or any non-trivial JS features
+- final design system
+- migrated production content
+- deployment pipeline
+- search, forms, and other richer site features
 
-## Local Workflow
+## Repo Map
+
+- `content/`: markdown content and front matter
+- `layouts/`: Hugo templates and partials
+- `assets/css/`: tokens, base styles, components, page-level CSS
+- `assets/js/`: minimal progressive JavaScript
+- `archetypes/`: templates for new content entries
+- `docs/`: sitemap, planning notes, and legacy visual references
+- `Justfile`: local workflow commands
+
+## Quick Start
 
 Requirements:
 - Hugo extended available as `hugo`
 - `just`
 
-Useful commands:
-- `just build` to generate the site into `public/`
-- `just serve` to start the dev server at `http://localhost:1313/`
-- `just test-serve` to do a short-lived preview boot check
-- `just clean` to remove generated Hugo artifacts
-- `just maintenance` to clean, validate, and show git status
+Start the dev server:
 
-To test in a browser:
+```bash
+just serve
+```
+
+Then open `http://localhost:1313/`.
+
+## Common Commands
+
+```bash
+just build        # build into public/
+just serve        # run local dev server
+just test-serve   # short-lived server startup check
+just check        # fail on Hugo warnings
+just clean        # remove generated artifacts
+just maintenance  # clean + validate + show git status
+just new-news my-update
+just new-event spring-school
+just new-project collaboration-x
+```
+
+## Editing Rules
+
+- Keep the implementation Hugo-native and reusable.
+- Prefer editing markdown content and front matter before creating custom templates.
+- Keep CSS modular and provisional until the real design pass.
+- Keep JS minimal and progressive.
+- Do not treat the prototype screenshot as a source of truth for IA.
+
+## Browser Test
+
 1. Run `just serve`
 2. Open `http://localhost:1313/`
-3. Click through the top navigation and confirm each section renders with its placeholder content
-4. Stop the server with `Ctrl+C`
+3. Click through the top navigation
+4. Confirm the homepage resource cards and section pages render
+5. Stop the server with `Ctrl+C`
 
-## Next Implementation Milestones
+## Notes
 
-1. Replace placeholder copy with migrated markdown content.
-2. Design the homepage and shared components properly.
-3. Add section-specific templates only where the generic layout is not enough.
-4. Decide on deployment and preview automation.
-5. Add richer content structures for projects, publications, and events if needed.
-
-See [`AGENTS.md`](AGENTS.md) for execution guidance for future Codex runs.
+- Generated output lives in `public/` and should not be committed.
+- The current site is intentionally raw and placeholder-heavy so content and design can evolve cleanly.
+- See [AGENTS.md](AGENTS.md) for repository-specific instructions used by coding agents.
