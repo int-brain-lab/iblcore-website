@@ -66,6 +66,10 @@ just test-serve   # short-lived server startup check
 just check        # fail on Hugo warnings
 just clean        # remove generated artifacts
 just maintenance  # clean + validate + show git status
+just cf-whoami    # verify Cloudflare auth
+just pages-build  # build with the default Cloudflare Pages URL
+just pages-deploy # deploy to the default Cloudflare Pages project
+just pages-list   # list Pages projects
 just new-news my-update
 just new-event spring-school
 just new-project collaboration-x
@@ -86,6 +90,21 @@ just new-project collaboration-x
 3. Click through the top navigation
 4. Confirm the homepage resource cards and section pages render
 5. Stop the server with `Ctrl+C`
+
+## Temporary Cloudflare Pages Deployment
+
+Current temporary Pages project:
+- `iblcore-website-preview`
+
+Deployment workflow:
+1. Run `wrangler login` once on this machine
+2. Run `just pages-deploy`
+3. Share either the stable project URL `https://iblcore-website-preview.pages.dev/` or the deployment-specific URL printed by Wrangler
+
+Notes:
+- This setup currently uses direct upload deployment from the local repo
+- It is suitable for provisional sharing
+- If you later want GitHub-driven preview deployments, create a separate Cloudflare Pages project with Git integration
 
 ## Notes
 

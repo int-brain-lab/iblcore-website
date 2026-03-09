@@ -39,6 +39,19 @@ maintenance:
   just check
   just status
 
+cf-whoami:
+  wrangler whoami
+
+pages-build project="iblcore-website-preview":
+  hugo -b https://{{project}}.pages.dev
+
+pages-deploy project="iblcore-website-preview" branch="main":
+  just pages-build {{project}}
+  wrangler pages deploy public --project-name {{project}} --branch {{branch}} --commit-dirty=true
+
+pages-list:
+  wrangler pages project list
+
 check-hugo:
   command -v hugo
   hugo version
