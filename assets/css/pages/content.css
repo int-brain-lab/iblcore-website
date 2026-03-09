@@ -1,0 +1,9 @@
+.page-hero {
+  background: var(--color-surface-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.page-hero h1 {
+  margin: 0 0 var(--space-sm);
+  font-size: clamp(2rem, 4vw, 3rem);
+}

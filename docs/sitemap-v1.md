@@ -1,6 +1,6 @@
 # IBL-Core Website Sitemap v1
 
-Status: Working baseline aligned with `docs/landing-prototype.webp` and current brainstorming decisions.
+Status: Working baseline aligned with `docs/landing-prototype.webp` and current brainstorming decisions. Initial Hugo scaffold implemented on March 9, 2026 with minimal placeholder templates and content stubs.
 Intended stack: Hugo static site generator, modern vanilla HTML/CSS, minimal vanilla JS.
 
 ## 1. Top-Level Navigation
@@ -20,7 +20,7 @@ Intended stack: Hugo static site generator, modern vanilla HTML/CSS, minimal van
 Sections:
 - Hero (prototype-like, mostly informational)
 - Intro text block
-- Highlight Resources cards (Data, Software, Hardware)
+- Highlight Resources cards (Data, Modalities, Analysis, Visualisation)
 - News & Updates preview
 - Funders/Support strip (home + footer only)
 - Footer navigation
@@ -41,6 +41,10 @@ Includes:
 
 ### 2.3 Resources (`/resources/`)
 
+- Data
+  - Brainwide map — within it, access + colab tutorials
+  - Other flagship datasets
+  - Personal project datasets
 - Modalities
   - Neuropixels
     - Chronic Neuropixels
@@ -53,16 +57,12 @@ Includes:
   - Behavior
     - IBL behaviour rig
   - Video
+- Analysis
+  - Brainbox
+  - Model of Zoe
 - Visualisation
   - Datoviz
   - Website renderer
-- Data analysis packages
-  - Brainbox
-  - Model of Zoe
-- Datasets
-  - Brainwide map — within it, access + colab tutorials
-  - Other flagship datasets
-  - Personal project datasets
 
 ### 2.4 Projects (`/projects/`)
 
@@ -128,8 +128,9 @@ content/
   resources/
     _index.md
     data.md
-    software.md
-    hardware.md
+    modalities.md
+    analysis.md
+    visualisation.md
   projects/
     _index.md
   publications/
@@ -165,6 +166,11 @@ Generic content page should provide:
 - Optional intro/lead text
 - Main rich content body
 - Optional side navigation for subsections
+
+Implementation status on March 9, 2026:
+- Base layout, header, footer, home layout, list layout, and single layout have been scaffolded.
+- Styling is intentionally provisional and should be replaced with the actual design system later.
+- The current homepage includes explicit placeholders for the future prototype-driven hero and supporting blocks.
 
 ## 5. CSS/JS Architecture (Vanilla-first)
 
@@ -220,7 +226,7 @@ Recommended order:
 From old site -> new site:
 
 Port first:
-- Resources (data/tools/protocols -> data/software/hardware mapping)
+- Resources (data, modalities, analysis, visualisation)
 - Projects
 - Publications and impact references
 - Team and core about content
@@ -244,7 +250,7 @@ Validation checks:
 ## 10. Execution Next Steps (Practical)
 
 1. Scaffold Hugo baseline:
-   - `hugo.toml`
+   - `hugo.yaml`
    - `content/` sections from this sitemap
    - `layouts/_default/` and `layouts/partials/`
    - `assets/css/` and `assets/js/`

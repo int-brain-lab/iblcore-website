@@ -1,0 +1,89 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-sans);
+  line-height: 1.5;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+p,
+ul,
+ol {
+  margin-top: 0;
+}
+
+main {
+  min-height: 70vh;
+}
+
+.shell {
+  width: min(100% - 2rem, var(--shell-width));
+  margin: 0 auto;
+}
+
+.narrow-shell {
+  width: min(100%, var(--shell-narrow));
+}
+
+.section,
+.page-hero,
+.hero {
+  padding: var(--space-3xl) 0;
+}
+
+.section--muted {
+  background: var(--color-surface-muted);
+}
+
+.section--accent {
+  background: var(--color-surface-accent);
+}
+
+.eyebrow {
+  margin-bottom: var(--space-xs);
+  color: var(--color-text-soft);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.lead {
+  max-width: 42rem;
+  color: var(--color-text-soft);
+  font-size: 1.125rem;
+}
+
+.prose > * + * {
+  margin-top: var(--space-md);
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.25rem;
+}
+
+@media (max-width: 800px) {
+  .section,
+  .page-hero,
+  .hero {
+    padding: var(--space-2xl) 0;
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+    <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    {{ $styles := slice
+      (resources.Get "css/tokens.css")
+      (resources.Get "css/base.css")
+      (resources.Get "css/components.css")
+      (resources.Get "css/pages/content.css")
+    }}
+    {{ if .IsHome }}
+      {{ $styles = $styles | append (resources.Get "css/pages/home.css") }}
+    {{ end }}
+    {{ $bundle := $styles | resources.Concat "css/site.css" | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}">
+    {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
+    <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
+  </head>
+  <body>
+    {{ partial "header.html" . }}
+    <main id="main-content">
+      {{ block "main" . }}{{ end }}
+    </main>
+    {{ partial "footer.html" . }}
+  </body>
+</html>

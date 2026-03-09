@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="shell site-header__inner">
+    <a class="site-brand" href="{{ "/" | relURL }}">
+      <span class="site-brand__mark">IBL</span>
+      <span class="site-brand__text">
+        <strong>IBL-Core</strong>
+        <span>Hugo baseline</span>
+      </span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      Menu
+    </button>
+
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <ul>
+        {{ range site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

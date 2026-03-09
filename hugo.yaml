@@ -1,0 +1,41 @@
+baseURL: "http://localhost:1313/"
+languageCode: "en-us"
+title: "IBL-Core"
+enableRobotsTXT: true
+
+params:
+  description: "IBL-Core public website built with Hugo, vanilla HTML, CSS, and minimal JavaScript."
+  tagline: "Open neuroscience infrastructure, software, and collaboration."
+  funders:
+    - "IBL"
+    - "Open science partners"
+    - "Research funders"
+
+menu:
+  main:
+    - name: "Home"
+      pageRef: "/"
+      weight: 10
+    - name: "About"
+      pageRef: "/about"
+      weight: 20
+    - name: "Resources"
+      pageRef: "/resources"
+      weight: 30
+    - name: "Projects"
+      pageRef: "/projects"
+      weight: 40
+    - name: "Publications"
+      pageRef: "/publications"
+      weight: 50
+    - name: "Events"
+      pageRef: "/events"
+      weight: 60
+    - name: "News"
+      pageRef: "/news"
+      weight: 70
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: false

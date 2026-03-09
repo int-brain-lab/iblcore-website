@@ -1,0 +1,32 @@
+.hero {
+  background: linear-gradient(180deg, #eef4ec 0%, var(--color-bg) 100%);
+}
+
+.hero__inner {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(18rem, 0.8fr);
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+.hero__copy h1 {
+  margin: 0 0 var(--space-md);
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+}
+
+.hero__placeholder {
+  min-height: 100%;
+}
+
+.placeholder-card {
+  min-height: 18rem;
+  display: grid;
+  align-content: start;
+}
+
+@media (max-width: 800px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+}
