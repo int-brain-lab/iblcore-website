@@ -212,8 +212,8 @@
 }
 
 .page-home .site-nav a {
-  color: rgba(255, 255, 255, 0.92);
-  background: rgba(78, 142, 197, 0.36);
+  color: #ffffff;
+  background: var(--color-accent);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
 }
 
@@ -221,7 +221,8 @@
 .page-home .site-nav a:focus-visible,
 .page-home .link-list a:hover,
 .page-home .link-list a:focus-visible {
-  background: rgba(68, 161, 225, 0.58);
+  color: var(--color-accent);
+  background: #ffffff;
   outline: none;
 }
 
