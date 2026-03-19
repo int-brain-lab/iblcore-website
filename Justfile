@@ -15,6 +15,9 @@ test-serve:
 check:
   hugo --panicOnWarning
 
+capture-landing:
+  npm run capture:landing
+
 clean:
   rm -rf public resources
   rm -f .hugo_build.lock
