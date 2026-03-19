@@ -80,7 +80,7 @@ main {
   padding-left: 1.25rem;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 520px) {
   .section,
   .page-hero,
   .hero {

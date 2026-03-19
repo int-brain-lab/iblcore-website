@@ -14,14 +14,16 @@
       (resources.Get "css/components.css")
       (resources.Get "css/pages/content.css")
     }}
-    {{ if .IsHome }}
-      {{ $styles = $styles | append (resources.Get "css/pages/home.css") }}
-    {{ end }}
     {{ if eq .Section "projects" }}
       {{ $styles = $styles | append (resources.Get "css/pages/projects.css") }}
     {{ end }}
     {{ $bundle := $styles | resources.Concat "css/site.css" | minify | fingerprint }}
     <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}">
+    {{ if .IsHome }}
+      {{ with resources.Get "css/pages/home.css" }}
+        <style>{{ .Content | safeCSS }}</style>
+      {{ end }}
+    {{ end }}
     {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
   </head>

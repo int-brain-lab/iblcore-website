@@ -98,7 +98,7 @@
   margin-top: var(--space-sm);
 }
 
-@media (max-width: 800px) {
+@media (max-width: 520px) {
   .project-accordion__summary {
     padding: var(--space-md);
   }
