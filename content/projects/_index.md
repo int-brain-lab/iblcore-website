@@ -1,5 +1,5 @@
 ---
 title: "Projects"
 description: "Research projects, partner projects, and affiliates."
-lead: "Explore structured project listings powered by Hugo data files and markdown content."
+lead: "Examples of research and partner projects supported by IBL Core, together with affiliated efforts across the network."
 ---

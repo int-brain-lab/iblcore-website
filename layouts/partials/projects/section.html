@@ -26,7 +26,7 @@
             <summary class="project-accordion__summary">
               <div class="project-accordion__heading">
                 {{ with .pi }}<p class="project-accordion__meta">{{ . }}</p>{{ end }}
-                <h3>{{ .title }}</h3>
+                <h3>{{ or .title .name }}</h3>
               </div>
               <span class="project-accordion__toggle" aria-hidden="true"></span>
             </summary>
