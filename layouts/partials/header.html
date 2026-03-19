@@ -15,10 +15,37 @@
     <nav class="site-nav" id="site-nav" aria-label="Primary">
       <ul>
         {{ range site.Menus.main }}
-          <li>
-            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>
+          {{ $entryPage := .Page }}
+          {{ if not $entryPage }}
+            {{ $entryPage = site.GetPage .PageRef }}
+          {{ end }}
+          {{ $children := slice }}
+          {{ if eq .Identifier "about" }}
+            {{ with $entryPage }}
+              {{ if .IsSection }}
+                {{ $children = .RegularPages.ByWeight }}
+              {{ end }}
+            {{ end }}
+          {{ else if and (eq .Name "About") $entryPage }}
+            {{ with $entryPage }}
+              {{ if .IsSection }}
+                {{ $children = .RegularPages.ByWeight }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+          <li class="site-nav__item{{ if gt (len $children) 0 }} site-nav__item--has-children{{ end }}">
+            <a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>
               {{ .Name }}
             </a>
+            {{ if gt (len $children) 0 }}
+              <ul class="site-nav__submenu" aria-label="{{ .Name }} submenu">
+                {{ range $children }}
+                  <li>
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
           </li>
         {{ end }}
       </ul>

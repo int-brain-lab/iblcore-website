@@ -1,0 +1,109 @@
+.page-hero__body {
+  margin-top: var(--space-lg);
+  max-width: 46rem;
+}
+
+.project-section__intro {
+  margin-bottom: var(--space-xl);
+  max-width: 54rem;
+}
+
+.project-accordion {
+  display: grid;
+  gap: var(--space-md);
+}
+
+.project-accordion__item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  overflow: clip;
+}
+
+.project-accordion__summary {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  cursor: pointer;
+  list-style: none;
+}
+
+.project-accordion__summary::-webkit-details-marker {
+  display: none;
+}
+
+.project-accordion__heading h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.project-accordion__meta {
+  margin-bottom: var(--space-xs);
+  color: var(--color-text-soft);
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.project-accordion__toggle {
+  position: relative;
+  flex: 0 0 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.15rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface-muted);
+}
+
+.project-accordion__toggle::before,
+.project-accordion__toggle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0.75rem;
+  height: 1px;
+  background: var(--color-accent);
+  transform: translate(-50%, -50%);
+}
+
+.project-accordion__toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
+.project-accordion__item[open] .project-accordion__toggle::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.project-accordion__content {
+  padding: 0 var(--space-lg) var(--space-lg);
+  border-top: 1px solid var(--color-border);
+}
+
+.project-accordion__content > :first-child {
+  margin-top: var(--space-lg);
+}
+
+.affiliate-list {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.affiliate-list li + li {
+  margin-top: var(--space-sm);
+}
+
+@media (max-width: 800px) {
+  .project-accordion__summary {
+    padding: var(--space-md);
+  }
+
+  .project-accordion__content {
+    padding: 0 var(--space-md) var(--space-md);
+  }
+}

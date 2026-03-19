@@ -1,0 +1,20 @@
+{{ define "main" }}
+  {{ $projects := site.Data.projects }}
+
+  <section class="page-hero">
+    <div class="shell">
+      <p class="eyebrow">Section</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ with .Content }}
+        <div class="prose page-hero__body">
+          {{ . }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ range $projects.sections }}
+    {{ partial "projects/section.html" . }}
+  {{ end }}
+{{ end }}

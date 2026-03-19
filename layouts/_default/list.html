@@ -8,21 +8,8 @@
   </section>
 
   <section class="section">
-    <div class="shell content-layout">
-      <article class="prose">
-        {{ .Content }}
-      </article>
-      {{ $pages := .Pages.ByTitle }}
-      {{ if gt (len $pages) 0 }}
-        <aside class="section-panel">
-          <h2>Pages in this section</h2>
-          <ul class="link-list">
-            {{ range $pages }}
-              <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
-            {{ end }}
-          </ul>
-        </aside>
-      {{ end }}
+    <div class="shell narrow-shell prose">
+      {{ .Content }}
     </div>
   </section>
 {{ end }}

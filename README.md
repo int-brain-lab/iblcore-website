@@ -23,6 +23,7 @@ Implemented:
 - Hugo config in `hugo.yaml`
 - Hugo-native structure in `content/`, `layouts/`, `assets/`, and `archetypes/`
 - Shared base templates for home, list, and single pages
+- Data-driven `/projects/` section powered by `data/projects.yaml` and markdown description files
 - Minimal placeholder styling and mobile nav toggle
 - Markdown stubs for top-level sections and key About/Resources pages
 - `Justfile` commands for local development and maintenance
@@ -36,6 +37,7 @@ Not implemented yet:
 ## Repo Map
 
 - `content/`: markdown content and front matter
+- `data/`: structured site data used to generate pages such as `/projects/`
 - `layouts/`: Hugo templates and partials
 - `assets/css/`: tokens, base styles, components, page-level CSS
 - `assets/js/`: minimal progressive JavaScript
@@ -79,6 +81,7 @@ just new-project collaboration-x
 
 - Keep the implementation Hugo-native and reusable.
 - Prefer editing markdown content and front matter before creating custom templates.
+- For `/projects/`, edit `data/projects.yaml` for structure and item metadata, then edit the referenced markdown files under `content/projects/descriptions/` for long-form copy.
 - Keep CSS modular and provisional until the real design pass.
 - Keep JS minimal and progressive.
 - Do not treat the prototype screenshot as a source of truth for IA.

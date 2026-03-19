@@ -46,17 +46,63 @@
   font-size: 0.875rem;
 }
 
-.site-nav ul,
+.site-nav > ul,
 .link-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.site-nav ul {
+.site-nav > ul {
   display: flex;
   align-items: center;
   gap: var(--space-md);
+}
+
+.site-nav__item {
+  position: relative;
+}
+
+.site-nav__item--has-children {
+  padding-bottom: var(--space-xs);
+  margin-bottom: calc(var(--space-xs) * -1);
+}
+
+.site-nav__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 20;
+  display: none;
+  min-width: 14rem;
+  padding: var(--space-sm);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  box-shadow: var(--shadow-soft);
+  list-style: none;
+}
+
+.site-nav__submenu li + li {
+  margin-top: var(--space-xs);
+}
+
+.site-nav__submenu a {
+  display: block;
+  padding: 0.35rem 0.5rem;
+  border-radius: calc(var(--radius-sm) - 0.15rem);
+  white-space: nowrap;
+}
+
+.site-nav__submenu a:hover,
+.site-nav__submenu a:focus-visible {
+  background: var(--color-surface-muted);
+  outline: none;
+}
+
+.site-nav__item--has-children:hover .site-nav__submenu,
+.site-nav__item--has-children:focus-within .site-nav__submenu {
+  display: block;
 }
 
 .site-nav a,
@@ -177,9 +223,40 @@
     display: block;
   }
 
-  .site-nav ul {
+  .site-nav > ul {
     flex-direction: column;
     align-items: flex-start;
     padding-top: var(--space-sm);
+  }
+
+  .site-nav__item {
+    width: 100%;
+  }
+
+  .site-nav__submenu {
+    position: static;
+    display: none;
+    min-width: 0;
+    margin-top: var(--space-xs);
+    padding: var(--space-xs) 0 0 var(--space-md);
+    border: 0;
+    border-left: 1px solid var(--color-border);
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .site-nav__submenu a {
+    padding: 0;
+  }
+
+  .site-nav__submenu a:hover,
+  .site-nav__submenu a:focus-visible {
+    background: transparent;
+  }
+
+  .site-nav__item--has-children:hover .site-nav__submenu,
+  .site-nav__item--has-children:focus-within .site-nav__submenu {
+    display: grid;
   }
 }
