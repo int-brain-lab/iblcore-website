@@ -43,7 +43,7 @@
 
 .hero__copy h1 {
   margin: 0;
-  font-size: clamp(2.2rem, 2.7vw, 2.28rem);
+  font-size: clamp(1.5rem, 3.8vw, 2.28rem);
   line-height: 0.97;
   font-weight: 400;
   letter-spacing: 0.005em;
@@ -60,7 +60,7 @@
 .hero__media {
   position: absolute;
   left: 50%;
-  bottom: -41vw;
+  bottom: -45vw;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -69,7 +69,7 @@
 }
 
 .hero__brain {
-  width: min(max(64rem, 114vw), 117vw);
+  width: min(max(64rem, 114vw), 148vw);
   max-width: none;
   opacity: 0.96;
   filter: drop-shadow(0 0 28px rgba(229, 134, 255, 0.22));
@@ -232,6 +232,12 @@
   object-fit: contain;
 }
 
+@media (max-width: 900px) {
+  .hero__media {
+    bottom: -19rem;
+  }
+}
+
 @media (max-width: 700px) {
   .page-home .shell {
     width: min(100% - 1.25rem, 56rem);
@@ -257,7 +263,7 @@
   }
 
   .hero__media {
-    bottom: -3.9rem;
+    bottom: -5.9rem;
   }
 
   .hero__brain {
