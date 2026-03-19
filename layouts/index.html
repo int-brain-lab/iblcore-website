@@ -1,42 +1,59 @@
 {{ define "main" }}
-  <section class="hero">
+  <section class="hero hero--landing">
     <div class="shell hero__inner">
       <div class="hero__copy">
-        <p class="eyebrow">IBL-Core</p>
-        <h1>{{ .Title }}</h1>
-        <p class="lead">{{ .Content }}</p>
+        <h1>Experimental &amp; theoretical neuroscientists collaborating to understand brainwide circuits for complex behavior</h1>
       </div>
-      <div class="hero__placeholder">
-        <div class="placeholder-card">
-          <p class="placeholder-card__title">Prototype block placeholder</p>
-          <p>Header / hero artwork / motion area can be designed later.</p>
+      <div class="hero__media" aria-hidden="true">
+        <img class="hero__brain" src="{{ "images/brain.png" | relURL }}" alt="">
+      </div>
+      <div class="hero__links" aria-label="External links">
+        <a class="hero__link" href="https://github.com/int-brain-lab/" aria-label="IBL Core GitHub">
+          <img src="{{ "images/github-light.svg" | relURL }}" alt="" width="22" height="22">
+        </a>
+        <a class="hero__link" href="#" aria-label="IBL Core bot">
+          <img src="{{ "images/bot-light.svg" | relURL }}" alt="" width="22" height="22">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-band landing-band--intro">
+    <div class="shell landing-band__inner">
+      <div class="landing-band__copy">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ut anim ad
+          minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, si deserunt mollit anim id est.
+        </p>
+      </div>
+      <a class="button button--landing" href="{{ "/about/" | relURL }}">About us</a>
+    </div>
+  </section>
+
+  <section class="landing-band landing-band--support">
+    <div class="shell">
+      <div class="support-section__header">
+        <h2>Support</h2>
+        <p>IBL is grateful for financial support from the following organizations</p>
+      </div>
+      <div class="support-strip" aria-label="Support organizations">
+        <div class="support-strip__item">
+          <img src="{{ "images/simons.png" | relURL }}" alt="Simons Foundation logo" width="118" height="118">
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="shell">
-      <div class="section-heading">
-        <p class="eyebrow">Intro</p>
-        <h2>What this scaffold already supports</h2>
-      </div>
-      <div class="prose">
-        <p>This provisional homepage maps to the sitemap structure and keeps the visual treatment intentionally minimal. Replace this text with the final landing-page narrative later.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--accent">
-    <div class="shell">
-      <div class="section-heading">
-        <p class="eyebrow">Support</p>
-        <h2>Funders and support strip</h2>
-      </div>
-      <div class="support-strip">
-        {{ range .Site.Params.funders }}
-          <div class="support-strip__item">{{ . }}</div>
-        {{ end }}
+        <div class="support-strip__item">
+          <img src="{{ "images/incf.png" | relURL }}" alt="INCF logo" width="118" height="118">
+        </div>
+        <div class="support-strip__item">
+          <img src="{{ "images/wellcome.png" | relURL }}" alt="Wellcome logo" width="118" height="118">
+        </div>
+        <div class="support-strip__item">
+          <img src="{{ "images/nih.png" | relURL }}" alt="National Institutes of Health logo" width="118" height="118">
+        </div>
       </div>
     </div>
   </section>

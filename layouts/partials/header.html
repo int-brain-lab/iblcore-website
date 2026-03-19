@@ -1,11 +1,7 @@
 <header class="site-header">
   <div class="shell site-header__inner">
     <a class="site-brand" href="{{ "/" | relURL }}">
-      <span class="site-brand__mark">IBL</span>
-      <span class="site-brand__text">
-        <strong>IBL-Core</strong>
-        <span>Hugo baseline</span>
-      </span>
+      <img src="{{ "images/ibl-core-logo.svg" | relURL }}" alt="IBL Core" width="124" height="79">
     </a>
 
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
@@ -14,40 +10,9 @@
 
     <nav class="site-nav" id="site-nav" aria-label="Primary">
       <ul>
-        {{ range site.Menus.main }}
-          {{ $entryPage := .Page }}
-          {{ if not $entryPage }}
-            {{ $entryPage = site.GetPage .PageRef }}
-          {{ end }}
-          {{ $children := slice }}
-          {{ if eq .Identifier "about" }}
-            {{ with $entryPage }}
-              {{ if .IsSection }}
-                {{ $children = .RegularPages.ByWeight }}
-              {{ end }}
-            {{ end }}
-          {{ else if and (eq .Name "About") $entryPage }}
-            {{ with $entryPage }}
-              {{ if .IsSection }}
-                {{ $children = .RegularPages.ByWeight }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-          <li class="site-nav__item{{ if gt (len $children) 0 }} site-nav__item--has-children{{ end }}">
-            <a href="{{ .URL }}"{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} aria-current="page"{{ end }}>
-              {{ .Name }}
-            </a>
-            {{ if gt (len $children) 0 }}
-              <ul class="site-nav__submenu" aria-label="{{ .Name }} submenu">
-                {{ range $children }}
-                  <li>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                  </li>
-                {{ end }}
-              </ul>
-            {{ end }}
-          </li>
-        {{ end }}
+        <li class="site-nav__item"><a href="{{ "/about/" | relURL }}">About</a></li>
+        <li class="site-nav__item"><a href="{{ "/projects/" | relURL }}">Projects</a></li>
+        <li class="site-nav__item"><a href="{{ "/about/contact/" | relURL }}">Contact</a></li>
       </ul>
     </nav>
   </div>
