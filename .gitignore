@@ -2,3 +2,11 @@
 /resources/
 /.hugo_build.lock
 /.hugo_build_cache/
+/node_modules/
+/reports/
+/.wrangler/
+docs/*.png
+docs/*.jpg
+docs/*.webp
+docs/*.svg
+docs/*.txt

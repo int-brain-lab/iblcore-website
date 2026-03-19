@@ -1,0 +1,10 @@
+{
+  "name": "iblcore-website",
+  "private": true,
+  "scripts": {
+    "capture:landing": "node scripts/capture-landing.mjs"
+  },
+  "devDependencies": {
+    "playwright": "^1.54.2"
+  }
+}
