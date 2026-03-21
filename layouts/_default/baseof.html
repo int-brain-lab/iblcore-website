@@ -8,25 +8,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap">
-    {{ $styles := slice
+    {{ $baseStyles := slice
       (resources.Get "css/tokens.css")
       (resources.Get "css/base.css")
       (resources.Get "css/components.css")
       (resources.Get "css/pages/content.css")
     }}
+    {{ $pageStyles := slice }}
     {{ if eq .Section "projects" }}
-      {{ $styles = $styles | append (resources.Get "css/pages/projects.css") }}
+      {{ $pageStyles = $pageStyles | append (resources.Get "css/pages/projects.css") }}
     {{ end }}
     {{ if .IsHome }}
-      {{ $styles = $styles | append (resources.Get "css/pages/home.css") }}
+      {{ $pageStyles = $pageStyles | append (resources.Get "css/pages/home.css") }}
     {{ end }}
     {{ if hugo.IsDevelopment }}
-      {{ range $styles }}
+      {{ range $baseStyles }}
+        <link rel="stylesheet" href="{{ .RelPermalink }}">
+      {{ end }}
+      {{ range $pageStyles }}
         <link rel="stylesheet" href="{{ .RelPermalink }}">
       {{ end }}
     {{ else }}
-      {{ $bundle := $styles | resources.Concat "css/site.css" | minify | fingerprint }}
+      {{ $bundle := $baseStyles | resources.Concat "css/site.css" | fingerprint }}
       <link rel="stylesheet" href="{{ $bundle.RelPermalink }}" integrity="{{ $bundle.Data.Integrity }}">
+      {{ range $pageStyles }}
+        {{ $style := . | fingerprint }}
+        <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
+      {{ end }}
     {{ end }}
     {{ $js := resources.Get "js/main.js" | minify | fingerprint }}
     <script src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}" defer></script>
