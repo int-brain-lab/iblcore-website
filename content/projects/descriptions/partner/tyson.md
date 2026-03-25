@@ -1,3 +1,5 @@
-**Collaborators:** Add the collaborating lab, institution, and IBL Core details here.
+This project, led jointly by the Neuroinformatics Unit (NIU) at UCL, the Allen Institute, and the International Brain Laboratory (IBL), aims to build sustainable, general-purpose software infrastructure for systems neuroscience. The collaboration focuses on developing tools that allow researchers to more easily compare analysis pipelines and build flexible workflows for large-scale behavioural and imaging datasets.
 
-Add the project summary, experimental approach, expected outputs, and the role of IBL Core for this collaboration.
+Two priority developments will be pursued. The first is PoseInterface, a general-purpose framework for running and comparing video analysis pipelines, including pose estimation tools such as LightningPose. The second is the development of a modular multiphoton imaging framework, conceptually analogous to SpikeInterface, which will provide standardized infrastructure for constructing and benchmarking imaging processing pipelines.
+
+These tools will be developed collaboratively and tested on real experimental datasets, with the goal of integrating them into existing neuroscience workflows where appropriate. By building reusable, open-source infrastructure and promoting community contributions, the project aims to reduce duplication across neuroscience software ecosystems and support the development of flexible, interoperable, and maintainable data-processing tools for the broader neuroscience community.

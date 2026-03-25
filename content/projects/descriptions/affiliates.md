@@ -1,1 +1,3 @@
-Use this section to introduce the affiliate projects and explain how they connect to IBL Core.
+The IBL Core Affiliate Programme enables us to engage a broader community of scientists while maintaining a sustainable level of support. It is designed for research groups aligned with IBL’s values of openness, collaboration, and technical excellence, but for whom full partnership is not yet feasible.
+
+Affiliates benefit from light-touch engagement, including strategic and technical guidance, as well as access to the IBL community and its shared resources. Launched as a pilot, the programme aims to foster new collaborations, support best practices, and grow a vibrant, connected neuroscience ecosystem.
