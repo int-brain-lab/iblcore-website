@@ -33,31 +33,102 @@
       <div class="shell landing-band__inner">
         <div class="landing-band__copy">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ut anim ad
-            minim veniam, quis nostrud ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          </p>
-          <p>
-            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, si deserunt mollit anim id est.
+            The IBL Core Engineering Team is a central group of scientific engineers dedicated to
+            enabling large-scale, collaborative neuroscience. Building on the International Brain
+            Laboratory's model of open, distributed science, the Core brings together expertise in data,
+            software, and infrastructure to support research across laboratories worldwide. [...]
           </p>
         </div>
         <a class="button button--landing" href="{{ "/about/" | relURL }}">About us</a>
       </div>
     </section>
 
+    <section class="landing-band landing-band--what-we-do">
+      <div class="shell what-we-do">
+        <div class="what-we-do__intro">
+          <h2>What We Do</h2>
+          <p>
+            The core team develops and maintains the technical foundations that make collaborative
+            neuroscience possible:
+          </p>
+        </div>
+
+        <div class="what-we-do__grid" aria-label="IBL Core capabilities">
+          <article class="what-we-do__item">
+            <div class="what-we-do__icon-card" aria-hidden="true">
+              <img src="{{ (resources.Get "svg/icon_data.svg").RelPermalink }}" alt="" width="104" height="104">
+            </div>
+            <div class="what-we-do__body">
+              <h3>Data Infrastructure &amp; Access</h3>
+              <p>Building tools for standardized data ingestion, organization and access.</p>
+            </div>
+          </article>
+
+          <article class="what-we-do__item">
+            <div class="what-we-do__icon-card" aria-hidden="true">
+              <img src="{{ (resources.Get "svg/icon_pipelines.svg").RelPermalink }}" alt="" width="150" height="150">
+            </div>
+            <div class="what-we-do__body">
+              <h3>Processing Pipelines</h3>
+              <p>Developing robust, scalable workflows for electrophysiology, imaging, behavior and video.</p>
+            </div>
+          </article>
+
+          <article class="what-we-do__item">
+            <div class="what-we-do__icon-card" aria-hidden="true">
+              <img src="{{ (resources.Get "svg/icon_cloud.svg").RelPermalink }}" alt="" width="124" height="117">
+            </div>
+            <div class="what-we-do__body">
+              <h3>Cloud &amp; Web Platforms</h3>
+              <p>Creating shared infrastructure and web-based tools.</p>
+            </div>
+          </article>
+
+          <article class="what-we-do__item">
+            <div class="what-we-do__icon-card" aria-hidden="true">
+              <img src="{{ (resources.Get "svg/icon_software.svg").RelPermalink }}" alt="" width="150" height="150">
+            </div>
+            <div class="what-we-do__body">
+              <h3>Visualization &amp; Software</h3>
+              <p>Designing user interfaces, applications and libraries.</p>
+            </div>
+          </article>
+
+          <article class="what-we-do__item">
+            <div class="what-we-do__icon-card" aria-hidden="true">
+              <img src="{{ (resources.Get "svg/icon_hardware.svg").RelPermalink }}" alt="" width="150" height="150">
+            </div>
+            <div class="what-we-do__body">
+              <h3>Hardware &amp; Acquisition Support</h3>
+              <p>Providing guidance and solutions for experimental setups and data acquisition systems.</p>
+            </div>
+          </article>
+
+          <article class="what-we-do__item">
+            <div class="what-we-do__icon-card" aria-hidden="true">
+              <img src="{{ (resources.Get "svg/icon_community.svg").RelPermalink }}" alt="" width="150" height="150">
+            </div>
+            <div class="what-we-do__body">
+              <h3>Training &amp; Community</h3>
+              <p>Supporting the broader community through workshops, documentation and open standards for best practices.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section class="landing-band landing-band--support">
       <div class="shell">
         <div class="support-section__header">
-          <h2>Support</h2>
-          <p>IBL is grateful for financial support from the following organizations</p>
+          <div class="support-section__heading">
+            <h2>Support</h2>
+            <p>IBL is grateful for financial support from the following organizations</p>
+          </div>
+          <a class="button button--support" href="{{ "/about/contact/" | relURL }}">Support us</a>
         </div>
         <div class="support-strip" aria-label="Support organizations">
           <div class="support-strip__item">
             <img src="{{ "images/simons.png" | relURL }}" alt="Simons Foundation logo" width="118" height="118">
-          </div>
-          <div class="support-strip__item">
-            <img src="{{ "images/incf.png" | relURL }}" alt="INCF logo" width="118" height="118">
           </div>
           <div class="support-strip__item">
             <img src="{{ "images/wellcome.png" | relURL }}" alt="Wellcome logo" width="118" height="118">

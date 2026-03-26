@@ -5,9 +5,13 @@
   --color-surface-accent: #009fd7;
   --color-text: #004d89;
   --color-text-soft: #ffffff;
+  --color-text-bright: #f9fdfe;
+  --color-text-muted: #6d96b7;
   --color-border: #ffffff;
   --color-accent: #004d89;
   --color-accent-soft: #009fd7;
+  --color-support-band: #50bce3;
+  --color-divider-soft: #d3eef8;
   --shadow-soft: none;
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
