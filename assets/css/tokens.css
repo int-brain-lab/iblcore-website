@@ -1,4 +1,5 @@
 :root {
+  --type-scale-prototype: 0.66;
   --color-bg: #ffffff;
   --color-surface: #ffffff;
   --color-surface-muted: #ffffff;
@@ -28,4 +29,27 @@
   --shell-page: 56rem;
   --shell-narrow: 46rem;
   --font-sans: "Ubuntu Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-size-hero-title: calc(3.5rem * var(--type-scale-prototype));
+  --font-size-intro-copy: calc(1.875rem * var(--type-scale-prototype));
+  --font-size-cta: calc(1.875rem * var(--type-scale-prototype));
+  --font-size-section-title: calc(2.875rem * var(--type-scale-prototype));
+  --font-size-section-copy: calc(1.875rem * var(--type-scale-prototype));
+  --font-size-card-title: calc(2.0625rem * var(--type-scale-prototype));
+  --font-size-card-copy: calc(1.4375rem * var(--type-scale-prototype));
+  --font-size-support-title: calc(2.875rem * var(--type-scale-prototype));
+  --font-size-support-copy: calc(1.875rem * var(--type-scale-prototype));
+  --font-size-footer-nav: calc(1.75rem * var(--type-scale-prototype));
+  --font-size-footer-legal: calc(0.9375rem * var(--type-scale-prototype));
+}
+
+@media (max-width: 700px) {
+  :root {
+    --type-scale-prototype: 0.62;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --type-scale-prototype: 0.58;
+  }
 }

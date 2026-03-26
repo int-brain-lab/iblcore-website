@@ -20,7 +20,7 @@
 .hero__panel {
   position: relative;
   overflow: hidden;
-  min-height: 37rem;
+  min-height: 49rem;
   background: #0a2c61;
 }
 
@@ -39,7 +39,7 @@
 .hero__content {
   position: relative;
   z-index: 2;
-  padding: 13.9rem 0 11.4rem;
+  padding: 18.9rem 0 11.4rem;
 }
 
 .hero__copy {
@@ -50,7 +50,7 @@
 
 .hero__copy h1 {
   margin: 0;
-  font-size: clamp(2rem, 3.45vw, 2.5rem);
+  font-size: var(--font-size-hero-title);
   line-height: 1.02;
   font-weight: 400;
   letter-spacing: 0.005em;
@@ -82,9 +82,9 @@
 
 .hero__links-wrap {
   position: sticky;
-  top: calc(7rem + var(--space-md));
-  margin-top: -25rem;
-  z-index: 3;
+  top: calc(6.1rem + var(--space-sm));
+  margin-top: -10.5rem;
+  z-index: 9;
   pointer-events: none;
 }
 
@@ -169,8 +169,8 @@
 
 .landing-band__copy {
   max-width: 42rem;
-  font-size: 1.09rem;
-  line-height: 1.36;
+  font-size: var(--font-size-intro-copy);
+  line-height: 1.2;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -194,7 +194,7 @@
 .what-we-do__intro h2 {
   margin: 0 0 0.7rem;
   color: var(--color-accent-soft);
-  font-size: clamp(2.35rem, 4.5vw, 3.15rem);
+  font-size: var(--font-size-section-title);
   line-height: 0.98;
   font-weight: 400;
 }
@@ -203,7 +203,7 @@
   margin: 0;
   max-width: 46rem;
   color: var(--color-text-bright);
-  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  font-size: var(--font-size-section-copy);
   line-height: 1.12;
 }
 
@@ -245,7 +245,7 @@
 .what-we-do__body h3 {
   margin: 0 0 0.55rem;
   color: var(--color-accent-soft);
-  font-size: clamp(1.45rem, 2.2vw, 1.85rem);
+  font-size: var(--font-size-card-title);
   line-height: 1;
   font-weight: 400;
 }
@@ -253,7 +253,7 @@
 .what-we-do__body p {
   margin: 0;
   color: var(--color-text-bright);
-  font-size: 1.08rem;
+  font-size: var(--font-size-card-copy);
   line-height: 1.18;
 }
 
@@ -273,7 +273,7 @@
   border-radius: 999px;
   background: #004d89;
   color: #ffffff;
-  font-size: 0.98rem;
+  font-size: var(--font-size-cta);
   letter-spacing: 0.03em;
   text-transform: uppercase;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
@@ -309,14 +309,14 @@
 
 .support-section__header h2 {
   color: rgba(0, 77, 137, 0.95);
-  font-size: 1.95rem;
+  font-size: var(--font-size-support-title);
   font-weight: 400;
   white-space: nowrap;
 }
 
 .support-section__header p {
   color: #ffffff;
-  /* font-size: 0.95rem; */
+  font-size: var(--font-size-support-copy);
   white-space: nowrap;
 }
 
@@ -328,7 +328,7 @@
   border-radius: 999px;
   background: var(--color-accent);
   color: var(--color-text-bright);
-  font-size: 0.98rem;
+  font-size: var(--font-size-cta);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
@@ -390,8 +390,8 @@
   }
 
   .hero__links-wrap {
-    top: calc(6.15rem + var(--space-sm));
-    margin-top: -21rem;
+    top: calc(5.5rem + var(--space-xs));
+    margin-top: -15rem;
   }
 
   .hero__panel {
@@ -409,7 +409,6 @@
   }
 
   .hero__copy h1 {
-    font-size: clamp(1.9rem, 5.8vw, 2.3rem);
     line-height: 1.05;
   }
 
@@ -424,7 +423,6 @@
 
   .landing-band__copy {
     max-width: 24rem;
-    font-size: 1rem;
   }
 
   .hero__links {
@@ -472,9 +470,7 @@
     min-height: 7rem;
   }
 
-  .what-we-do__body h3 {
-    font-size: clamp(1.3rem, 4vw, 1.6rem);
-  }
+  .what-we-do__body h3 {}
 
   .support-section__header p {
     white-space: normal;
@@ -501,7 +497,6 @@
   }
 
   .hero__copy h1 {
-    font-size: clamp(1.5rem, 8vw, 1.85rem);
     line-height: 1.06;
   }
 
@@ -509,21 +504,7 @@
     opacity: 0.96;
   }
 
-  .hero__links {
-    margin-top: 0;
-  }
-
-  .landing-band__copy {
-    font-size: 1.02rem;
-  }
-
-  .what-we-do__intro h2 {
-    font-size: 2.1rem;
-  }
-
-  .what-we-do__intro p {
-    font-size: 1.18rem;
-  }
+  .landing-band__copy {}
 
   .what-we-do__item {
     gap: 0.8rem;
@@ -537,10 +518,6 @@
 
   .what-we-do__icon-card img {
     max-width: 4rem;
-  }
-
-  .what-we-do__body p {
-    font-size: 1rem;
   }
 
   .support-strip {
