@@ -62,14 +62,11 @@
 .hero__links-wrap {
   position: sticky;
   top: calc(6.1rem + var(--space-sm));
-  margin-top: -31rem;
-  z-index: 9;
-  pointer-events: none;
-}
-
-.hero__links-shell {
   display: flex;
   justify-content: flex-end;
+  margin-top: 1.6rem;
+  z-index: 9;
+  pointer-events: none;
 }
 
 .hero__links {
@@ -355,7 +352,7 @@
 
   .hero__links-wrap {
     top: calc(5.5rem + var(--space-xs));
-    margin-top: -23rem;
+    margin-top: 1.2rem;
   }
 
   .hero__panel {
