@@ -1,0 +1,33 @@
+{{ define "main" }}
+  <section class="funding-hero" aria-labelledby="funding-sources-title">
+    <div class="shell page-shell funding-hero__inner">
+      <h1 id="funding-sources-title" class="funding-hero__title">{{ .Title }}</h1>
+    </div>
+  </section>
+
+  <section class="funding-banner-section">
+    <div class="funding-banner">
+      <div class="shell page-shell">
+        <div class="prose funding-banner__content">
+          {{ .Content }}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="funding-logos-section" aria-label="Funding organisations">
+    <div class="shell page-shell">
+      <div class="funding-logos">
+        <div class="funding-logo-card">
+          <img src="{{ "images/simons.png" | relURL }}" alt="Simons Foundation" width="148" height="148">
+        </div>
+        <div class="funding-logo-card">
+          <img src="{{ "images/wellcome.png" | relURL }}" alt="Wellcome Trust" width="148" height="148">
+        </div>
+        <div class="funding-logo-card">
+          <img src="{{ "images/nih.png" | relURL }}" alt="National Institutes of Health" width="148" height="148">
+        </div>
+      </div>
+    </div>
+  </section>
+{{ end }}

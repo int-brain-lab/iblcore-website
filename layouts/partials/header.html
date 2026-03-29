@@ -1,4 +1,33 @@
+{{ $section := .Section }}
+{{ $pagePath := .RelPermalink }}
 {{ $headerVariant := .Params.header_variant | default "non-landing" }}
+{{ $menuItems := slice
+  (dict
+    "title" "About"
+    "url" "/about/"
+    "active" (and (eq $section "about") (ne $pagePath "/about/contact/"))
+    "children" (slice
+      (dict "title" "Who We Are" "url" "/about/" "active" (eq $pagePath "/about/"))
+      (dict "title" "The Team" "url" "/about/team/" "active" (eq $pagePath "/about/team/"))
+      (dict "title" "FAQ" "url" "/about/faq/" "active" (eq $pagePath "/about/faq/"))
+      (dict "title" "Funding Sources" "url" "/about/funding/" "active" (eq $pagePath "/about/funding/"))
+    )
+  )
+  (dict "title" "Resources" "url" "/resources/" "active" (eq $section "resources"))
+  (dict
+    "title" "Projects"
+    "url" "/projects/"
+    "active" (eq $section "projects")
+    "children" (slice
+      (dict "title" "Ongoing Projects" "url" "/projects/#ibl-research-projects" "active" (or (eq $pagePath "/projects/") (hasPrefix $pagePath "/projects/descriptions/")))
+      (dict "title" "New Partner Projects" "url" "/new-partner-projects/" "active" (eq $pagePath "/new-partner-projects/"))
+    )
+  )
+  (dict "title" "Publications" "url" "/publications/" "active" (eq $section "publications"))
+  (dict "title" "Events" "url" "/events/" "active" (eq $section "events"))
+  (dict "title" "Contact" "url" "/about/contact/" "active" (eq $pagePath "/about/contact/"))
+  (dict "title" "News" "url" "/news/" "active" (eq $section "news"))
+}}
 <header class="site-header site-header--{{ $headerVariant }}">
   <div class="shell site-header__inner">
     <a class="site-brand" href="{{ "/" | relURL }}">
@@ -16,19 +45,19 @@
 
     <nav class="site-nav" id="site-nav" aria-label="Primary">
       <ul>
-        {{ $section := .Section }}
-        {{ $pagePath := .RelPermalink }}
-        {{ range slice
-          (dict "title" "About" "url" "/about/" "active" (and (eq $section "about") (ne $pagePath "/about/contact/")))
-          (dict "title" "Resources" "url" "/resources/" "active" (eq $section "resources"))
-          (dict "title" "Projects" "url" "/projects/" "active" (eq $section "projects"))
-          (dict "title" "Publications" "url" "/publications/" "active" (eq $section "publications"))
-          (dict "title" "Events" "url" "/events/" "active" (eq $section "events"))
-          (dict "title" "Contact" "url" "/about/contact/" "active" (eq $pagePath "/about/contact/"))
-          (dict "title" "News" "url" "/news/" "active" (eq $section "news"))
-        }}
-          <li class="site-nav__item">
-            <a href="{{ .url | relURL }}"{{ if .active }} aria-current="page"{{ end }}>{{ .title }}</a>
+        {{ range $menuItems }}
+          {{ $children := .children | default (slice) }}
+          <li class="site-nav__item{{ if gt (len $children) 0 }} site-nav__item--has-children{{ end }}">
+            <a class="site-nav__link{{ if gt (len $children) 0 }} site-nav__link--has-children{{ end }}" href="{{ .url | relURL }}"{{ if .active }} aria-current="page"{{ end }}>{{ .title }}</a>
+            {{ if gt (len $children) 0 }}
+              <ul class="site-nav__submenu" aria-label="{{ .title }} submenu">
+                {{ range $children }}
+                  <li>
+                    <a href="{{ .url | relURL }}"{{ if .active }} aria-current="page"{{ end }}>{{ .title }}</a>
+                  </li>
+                {{ end }}
+              </ul>
+            {{ end }}
           </li>
         {{ end }}
       </ul>
