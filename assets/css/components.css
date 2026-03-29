@@ -250,6 +250,23 @@
   color: var(--color-accent);
 }
 
+.button {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--button-pill-min-height);
+  padding: var(--button-pill-pad-y) var(--button-pill-pad-x);
+  border-radius: 999px;
+  font-size: var(--button-pill-font-size);
+  line-height: 1;
+  letter-spacing: var(--button-pill-letter-spacing);
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
 .content-layout {
   display: grid;
   grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr);

@@ -39,8 +39,13 @@
   --content-width-copy: 1040px;
   --content-width-wide-copy: 1208px;
   --content-width-panel: 1207px;
-  --section-pad-about-intro-y: 1.7rem;
-  --section-pad-about-work-y: 1.9rem;
+  --section-pad-about-intro-y: 2.25rem;
+  --section-pad-about-work-y: 2.35rem;
+  --button-pill-min-height: 2.6rem;
+  --button-pill-pad-y: 0.28rem;
+  --button-pill-pad-x: 0.88rem;
+  --button-pill-font-size: calc(1.45rem * var(--type-scale-prototype));
+  --button-pill-letter-spacing: 0.05em;
   --font-sans: "Ubuntu Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-hero-title: calc(3.5rem * var(--type-scale-prototype));
   --font-size-page-hero-title: calc(4.1rem * var(--type-scale-prototype));

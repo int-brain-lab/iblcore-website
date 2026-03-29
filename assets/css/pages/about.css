@@ -58,6 +58,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  width: min(100%, var(--content-width-wide-copy));
   gap: 1.5rem;
   padding: var(--section-pad-about-intro-y) 0;
 }
@@ -81,6 +82,7 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
+  width: min(100%, var(--content-width-wide-copy));
   gap: 1rem;
   margin-bottom: 0.9rem;
 }
@@ -97,6 +99,10 @@
   color: #004d89;
 }
 
+.about-section--mission .about-section__header {
+  width: min(100%, var(--content-width-panel));
+}
+
 .about-copy {
   max-width: var(--content-width-wide-copy);
   font-size: var(--font-size-page-copy);
@@ -104,7 +110,7 @@
 }
 
 .about-copy p {
-  margin: 0 0 0.65rem;
+  margin: 0 0 1rem;
 }
 
 .about-copy p:last-child {
@@ -132,13 +138,7 @@
 .button--about-solid,
 .button--about-ghost,
 .button--about-intro {
-  min-height: 2rem;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  font-size: calc(1rem * var(--type-scale-prototype));
-  line-height: 1;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  text-decoration: none;
 }
 
 .button--about-solid {
