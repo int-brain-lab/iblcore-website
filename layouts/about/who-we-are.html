@@ -8,6 +8,10 @@
   {{ if and $missionURL (not (hasPrefix $missionURL "#")) }}
     {{ $missionURL = $missionURL | relURL }}
   {{ end }}
+  {{ $introTeamURL := .Params.intro_team_button_url | default $missionURL }}
+  {{ if and $introTeamURL (not (hasPrefix $introTeamURL "#")) }}
+    {{ $introTeamURL = $introTeamURL | relURL }}
+  {{ end }}
 
   <div class="about-page">
     <section class="about-hero">
@@ -32,11 +36,12 @@
 
     <section class="about-band about-band--intro">
       <div class="shell about-band__inner">
-        <div class="about-copy about-copy--light">
+        <div class="about-copy about-copy--light about-copy--intro">
           {{ range .Params.intro_paragraphs }}
             <p>{{ . }}</p>
           {{ end }}
         </div>
+        <a class="button button--about-intro" href="{{ $introTeamURL }}">{{ .Params.intro_team_button_text | default .Params.mission_history_button_text }}</a>
       </div>
     </section>
 
@@ -47,7 +52,7 @@
           <a class="button button--about-solid" href="{{ $workURL }}">{{ .Params.how_we_work_button_text }}</a>
         </div>
 
-        <div class="about-copy about-copy--dark">
+        <div class="about-copy about-copy--dark about-copy--work">
           {{ range .Params.how_we_work_paragraphs }}
             <p>{{ . }}</p>
           {{ end }}

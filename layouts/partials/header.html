@@ -1,4 +1,5 @@
-<header class="site-header">
+{{ $headerVariant := .Params.header_variant | default "non-landing" }}
+<header class="site-header site-header--{{ $headerVariant }}">
   <div class="shell site-header__inner">
     <a class="site-brand" href="{{ "/" | relURL }}">
       <img src="{{ "images/ibl-core-logo.svg" | relURL }}" alt="IBL Core" width="124" height="79">

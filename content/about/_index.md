@@ -3,9 +3,13 @@ title: "About"
 description: "Who we are, how we work, and how the IBL Core Engineering Team supports collaborative neuroscience."
 lead: "Learn how the IBL Core Engineering Team partners with scientists to design and scale modern, reproducible neuroscience workflows."
 layout: "who-we-are"
-body_class: "page-header-overlay page-footer-landing page-about-who"
+body_class: "page-about-who"
+header_variant: "landing"
+footer_variant: "non-landing"
 hero_title: "About Us"
 hero_alt: "Abstract neuron illustration"
+intro_team_button_text: "The Team"
+intro_team_button_url: "/about/team/"
 intro_paragraphs:
   - "The IBL Core Engineering Team is a central group of scientific engineers dedicated to enabling large-scale, collaborative neuroscience. Building on the International Brain Laboratory’s model of open, distributed science, the Core brings together expertise in data, software, and infrastructure to support research across laboratories worldwide."
   - "Originally developed to support a coordinated, large-scale effort across experimental labs, the engineering core played a key role in standardizing data collection, enabling large-scale processing, and integrating analysis across projects. As the collaboration evolved to include a broader set of smaller, investigator-led projects, the Core developed deep expertise in supporting diverse scientific workflows and requirements."
@@ -31,5 +35,10 @@ mission_history_cards:
       - "A shared, ambitious goal, open science, standardized methods, and distributed collaboration continue to shape how the Core works today."
   - title: "Building for What Comes Next"
     body:
-      - "This section is intentionally structured as an editable content block so the graphist’s design can be preserved while the final long-form mission and history text is completed."
+      - "Today the Core extends beyond its original scope, supporting both coordinated flagship collaborations and smaller investigator-led projects with shared infrastructure, engineering expertise, and open workflows."
+      - "The same principles still guide the work: robust technical foundations, reproducible methods, and tools that can be adopted and improved by the wider neuroscience community."
+  - title: "A New Model for Neuroscience"
+    body:
+      - "The IBL Core is growing into a collaborative engineering partner for modern neuroscience, helping research groups design scalable data pipelines, shared software platforms, and interoperable workflows."
+      - "By combining open science values with practical engineering support, the Core offers a model that helps teams move faster while contributing durable tools and standards back to the field."
 ---

@@ -33,8 +33,8 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 5rem;
-  --shell-width: 74rem;
-  --shell-page: 56rem;
+  --shell-width: 1280px;
+  --shell-page: 1280px;
   --shell-narrow: 46rem;
   --font-sans: "Ubuntu Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
   --font-size-hero-title: calc(3.5rem * var(--type-scale-prototype));

@@ -1,4 +1,5 @@
-<footer class="site-footer">
+{{ $footerVariant := .Params.footer_variant | default "non-landing" }}
+<footer class="site-footer site-footer--{{ $footerVariant }}">
   <div class="site-footer__primary">
     <div class="shell site-footer__inner">
       <a class="site-brand site-brand--footer" href="{{ "/" | relURL }}">

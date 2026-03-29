@@ -59,49 +59,6 @@
   object-position: center 33%;
 }
 
-.hero__links-wrap {
-  position: sticky;
-  top: calc(6.1rem + var(--space-sm));
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 1.6rem;
-  z-index: 9;
-  pointer-events: none;
-}
-
-.hero__links {
-  display: grid;
-  gap: 0.35rem;
-  padding: 0.35rem;
-  border-radius: 999px;
-  background: var(--color-hero-links);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
-  pointer-events: auto;
-}
-
-.hero__link {
-  display: inline-grid;
-  place-items: center;
-  width: 2.45rem;
-  height: 2.45rem;
-  border-radius: 999px;
-  background: var(--color-surface);
-  box-shadow:
-    0 3px 8px var(--color-shadow-soft-dark),
-    inset 0 0 0 1px rgba(0, 77, 137, 0.14);
-}
-
-.hero__link:hover,
-.hero__link:focus-visible {
-  transform: translateY(-1px);
-  outline: none;
-}
-
-.hero__link img {
-  width: 1.35rem;
-  height: 1.35rem;
-}
-
 .landing-band {
   position: relative;
   z-index: 3;
@@ -144,7 +101,9 @@
 }
 
 .landing-band__copy {
-  max-width: 42rem;
+  flex: 1 1 0;
+  max-width: 54rem;
+  min-width: 0;
   font-size: var(--font-size-intro-copy);
   line-height: 1.2;
   color: var(--color-text-on-dark);
@@ -198,10 +157,10 @@
 }
 
 .what-we-do__icon-card {
-  flex: 0 0 8.75rem;
+  flex: 0 0 7rem;
   display: grid;
   place-items: center;
-  min-height: 8.75rem;
+  min-height: 7rem;
   padding: 0.15rem;
   border-radius: var(--radius-md);
   background: var(--color-white-strong);
@@ -255,6 +214,7 @@
 
 .button--landing {
   align-self: flex-start;
+  flex: 0 0 auto;
   min-width: 7.3rem;
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
 }
@@ -304,6 +264,8 @@
 
 .button--support {
   min-width: 11.5rem;
+  padding-left: 1.1rem;
+  padding-right: 1.1rem;
 }
 
 .support-strip {
@@ -334,9 +296,6 @@
   max-width: min(100%, 8.75rem);
   height: auto;
   object-fit: contain;
-  background: var(--color-white-strong);
-  padding: 0.3rem;
-  border-radius: 0.15rem;
 }
 
 @media (max-width: 900px) {
@@ -348,11 +307,6 @@
 @media (max-width: 700px) {
   .page-home .shell {
     width: min(100% - 1.25rem, 56rem);
-  }
-
-  .hero__links-wrap {
-    top: calc(5.5rem + var(--space-xs));
-    margin-top: 1.2rem;
   }
 
   .hero__panel {
@@ -378,11 +332,6 @@
 
   .landing-band__copy {
     max-width: 24rem;
-  }
-
-  .hero__links {
-    grid-auto-flow: column;
-    transform: none;
   }
 
   .landing-band__inner {
