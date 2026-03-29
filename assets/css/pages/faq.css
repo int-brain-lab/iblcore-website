@@ -77,7 +77,8 @@
 }
 
 .faq-group__panel {
-  padding: var(--faq-group-pad-y) max(calc((100vw - var(--shell-width)) / 2 + var(--faq-group-pad-x)), var(--faq-group-pad-x));
+  padding-block: var(--faq-group-pad-y);
+  padding-inline: max(calc((100vw - var(--shell-width)) / 2), 1rem);
 }
 
 .faq-group--base .faq-group__panel {
