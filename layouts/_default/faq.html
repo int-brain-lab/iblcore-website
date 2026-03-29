@@ -1,40 +1,37 @@
 {{ define "main" }}
   {{ $faq := hugo.Data.faq }}
 
-  <section class="page-hero">
-    <div class="shell page-shell">
-      <p class="eyebrow">{{ if .CurrentSection }}{{ .CurrentSection.Title }}{{ else }}Page{{ end }}</p>
-      <h1>{{ .Title }}</h1>
-      {{ with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
+  <section class="faq-hero">
+    <div class="faq-hero__media" aria-hidden="true"></div>
+    <div class="shell faq-hero__inner">
+      <div class="faq-hero__copy">
+        <h1>Frequently Asked Questions</h1>
+      </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="shell page-shell">
-      <div class="faq-groups">
-        {{ range $faq.groups }}
-          <section class="faq-group">
-            <div class="section-heading">
-              <h2>{{ .title }}</h2>
-            </div>
-            <div class="faq-accordion">
-              {{ range .items }}
-                <details class="faq-accordion__item">
-                  <summary class="faq-accordion__summary">
-                    <div class="faq-accordion__heading">
-                      <h3>{{ .question }}</h3>
-                    </div>
-                    <span class="faq-accordion__toggle" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-accordion__content prose">
+  <section class="faq-sections" aria-label="Frequently asked questions">
+    {{ range $index, $group := $faq.groups }}
+      {{ $variant := cond (modBool $index 2) "faq-group--base" "faq-group--alt" }}
+      <div class="shell faq-group__shell">
+        <section class="faq-group {{ $variant }}">
+          <div class="faq-group__panel">
+            <header class="faq-group__header">
+              <h2>{{ $group.title }}</h2>
+            </header>
+            <div class="faq-group__items">
+              {{ range $group.items }}
+                <article class="faq-item">
+                  <h3 class="faq-item__question">{{ .question }}</h3>
+                  <div class="faq-item__answer prose">
                     {{ .answer | markdownify }}
                   </div>
-                </details>
+                </article>
               {{ end }}
             </div>
-          </section>
-        {{ end }}
+          </div>
+        </section>
       </div>
-    </div>
+    {{ end }}
   </section>
 {{ end }}
