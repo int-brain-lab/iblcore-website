@@ -184,14 +184,14 @@
   max-width: var(--content-width-panel-copy);
 }
 
-.about-mission-card + .about-mission-card {
+.about-mission-card+.about-mission-card {
   margin-top: 1rem;
   padding-top: 0.95rem;
   border-top: 1px solid rgba(255, 255, 255, 0.24);
 }
 
 .about-mission-card h3 {
-  margin: 0 0 0.55rem;
+  margin: 1rem 0 1.55rem;
   color: #ffffff;
   font-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-over-copy));
   line-height: 1.02;
@@ -221,7 +221,7 @@
   gap: var(--space-sm);
 }
 
-.about-page-list__item + .about-page-list__item {
+.about-page-list__item+.about-page-list__item {
   margin-top: 0;
 }
 
@@ -258,6 +258,7 @@
 }
 
 @media (max-width: 700px) {
+
   .about-hero,
   .about-hero__inner {
     min-height: 28rem;
@@ -269,6 +270,7 @@
 }
 
 @media (max-width: 520px) {
+
   .about-hero,
   .about-hero__inner {
     min-height: 23rem;
