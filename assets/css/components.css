@@ -430,10 +430,9 @@
 
 .page-controller {
   position: fixed;
-  top: 50%;
+  top: var(--controller-top-offset);
   right: clamp(0.75rem, 2vw, 1.35rem);
   z-index: 12;
-  transform: translateY(-50%);
   pointer-events: none;
 }
 

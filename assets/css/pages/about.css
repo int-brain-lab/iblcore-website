@@ -55,16 +55,17 @@
 }
 
 .about-band__inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, var(--content-width-copy)) auto;
   align-items: flex-start;
   justify-content: space-between;
-  width: min(100%, var(--content-width-wide-copy));
-  gap: 1.5rem;
-  padding: var(--section-pad-about-intro-y) 0;
+  column-gap: var(--content-gap-cta);
+  row-gap: 1rem;
+  padding: var(--about-intro-pad-top) 0 var(--about-intro-pad-bottom);
 }
 
 .about-section__inner {
-  padding: var(--section-pad-about-work-y) 0;
+  padding: var(--section-pad-about-work-y) 0 calc(var(--section-pad-about-work-y) - 0.35rem);
 }
 
 .about-section--work {
@@ -82,9 +83,9 @@
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: space-between;
-  width: min(100%, var(--content-width-wide-copy));
+  width: 100%;
   gap: 1rem;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.15rem;
 }
 
 .about-section__header h2 {
@@ -99,18 +100,14 @@
   color: #004d89;
 }
 
-.about-section--mission .about-section__header {
-  width: min(100%, var(--content-width-panel));
-}
-
 .about-copy {
   max-width: var(--content-width-wide-copy);
   font-size: var(--font-size-page-copy);
-  line-height: 1.28;
+  line-height: 1.3334;
 }
 
 .about-copy p {
-  margin: 0 0 1rem;
+  margin: 0 0 var(--about-intro-copy-gap);
 }
 
 .about-copy p:last-child {
@@ -121,10 +118,11 @@
   flex: 1 1 0;
   max-width: var(--content-width-copy);
   min-width: 0;
+  line-height: var(--about-intro-copy-line-height);
 }
 
 .about-copy--work {
-  max-width: 1176px;
+  max-width: var(--content-width-wide-copy);
 }
 
 .about-copy--light {
@@ -154,7 +152,11 @@
 .button--about-intro {
   flex: 0 0 auto;
   align-self: flex-start;
-  margin-top: 0.15rem;
+  width: var(--button-pill-width-sm);
+  min-height: var(--button-pill-height-lg);
+  padding-left: 0;
+  padding-right: 0;
+  margin-top: 9px;
   background: #ffffff;
   color: #004d89;
 }
@@ -172,10 +174,14 @@
 .about-mission-panel {
   display: grid;
   gap: 0;
-  max-width: var(--content-width-panel);
-  padding: 1.2rem 1.15rem 1.05rem;
+  width: 100%;
+  padding: 1.2rem var(--content-inset-panel-x) 1.05rem;
   border-radius: 0.3rem;
   background: #009fd7;
+}
+
+.about-mission-card {
+  max-width: var(--content-width-panel-copy);
 }
 
 .about-mission-card + .about-mission-card {
