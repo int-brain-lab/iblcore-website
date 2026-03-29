@@ -612,13 +612,6 @@
   }
 }
 
-.page-home .site-header {
-  position: absolute;
-  inset: 0 0 auto;
-  border-bottom: 0;
-  background: transparent;
-}
-
 .page-home .site-header__inner {
   padding: 2.2rem 0 0;
 }
@@ -716,10 +709,6 @@
     align-items: flex-start;
     gap: 0.5rem;
     padding-top: var(--space-sm);
-  }
-
-  .page-home .site-header {
-    position: absolute;
   }
 
   .page-home .site-header__inner {

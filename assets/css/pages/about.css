@@ -290,125 +290,62 @@
 }
 
 .page-about-team {
-  background: #01021e;
+  position: relative;
+  background: #06264b;
   color: #ffffff;
 }
 
-.page-about-team .site-header {
-  position: absolute;
-  inset: 0 0 auto;
-  background: linear-gradient(180deg, rgba(1, 2, 30, 0.72) 0%, rgba(1, 2, 30, 0.4) 72%, rgba(1, 2, 30, 0) 100%);
-  border-bottom-color: transparent;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  z-index: 20;
+.page-about-team::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(180deg, rgba(2, 18, 45, 0.12) 0%, rgba(2, 18, 45, 0.28) 38%, rgba(2, 18, 45, 0.42) 100%),
+    url("/images/team/ibl-brain.webp") center -24% / 100% auto no-repeat;
 }
 
-.page-about-team .site-nav a {
-  color: #ffffff;
+.page-about-team::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, rgba(1, 16, 39, 0.06) 0%, rgba(1, 16, 39, 0.2) 100%);
 }
 
-.page-about-team .site-nav a[aria-current="page"] {
-  color: #009fd7;
+.page-about-team .site-footer {
+  position: relative;
+  z-index: 1;
 }
 
 .team-page {
-  background:
-    radial-gradient(circle at top center, rgba(0, 159, 215, 0.12), transparent 44%),
-    #01021e;
-}
-
-.team-hero {
-  position: relative;
-  overflow: hidden;
-  min-height: 44rem;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  background:
-    linear-gradient(180deg, rgba(1, 2, 30, 0.2) 0%, rgba(1, 2, 30, 0.38) 46%, rgba(1, 2, 30, 0.82) 100%),
-    #01021e;
-}
-
-.team-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: url("/images/team/ibl-brain.webp");
-  background-position: center 42%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.team-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(1, 2, 30, 0.18) 0%, rgba(1, 2, 30, 0.2) 24%, rgba(1, 2, 30, 0.65) 75%, #01021e 100%),
-    linear-gradient(90deg, rgba(0, 159, 215, 0.18) 0%, transparent 34%, transparent 66%, rgba(0, 159, 215, 0.08) 100%);
-}
-
-.team-hero__inner {
   position: relative;
   z-index: 1;
-  display: flex;
-  align-items: flex-end;
-  min-height: 45rem;
-  padding-top: 8rem;
-  padding-bottom: 1.15rem;
 }
 
-.team-hero__content {
-  width: 100%;
+.team-intro-banner {
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.team-hero__title {
-  margin: 0;
-  color: #ffffff;
-  font-size: var(--font-size-page-hero-title);
-  line-height: 0.98;
-  font-weight: 400;
+.team-hero__media {
+  background: linear-gradient(180deg, rgba(2, 18, 45, 0.04) 0%, rgba(2, 18, 45, 0.12) 58%, rgba(1, 18, 43, 0.42) 100%);
 }
 
-.team-hero__band {
-  position: relative;
-  z-index: 1;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
-  padding: 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  background: linear-gradient(180deg, rgba(100, 161, 214, 0.18), rgba(45, 63, 111, 0.36));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(14px) saturate(135%);
-  -webkit-backdrop-filter: blur(14px) saturate(135%);
+.team-intro-banner.section-banner {
+  z-index: 2;
 }
 
-.team-hero__glass {
-  width: 100%;
-  padding: 2.35rem 0 2.5rem;
+.team-intro-banner .section-banner__inner {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
-.team-hero__glass .prose {
-  max-width: min(100%, 73rem);
-}
-
-.team-hero__glass .prose>*+* {
+.team-intro-banner__copy>*+* {
   margin-top: 1rem;
-}
-
-.team-hero__glass p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.96);
-  font-size: var(--font-size-page-copy-compact);
-  line-height: 1.32;
 }
 
 .team-grid-section {
   padding: 3rem 0 4.5rem;
-  background: #01021e;
+  background: #01021E;
 }
 
 .team-grid {
@@ -427,7 +364,7 @@
 .team-card__frame {
   position: relative;
   overflow: hidden;
-  border: 1.5px solid #009fd7;
+  border: 1.5px solid #8fdcff;
   border-radius: 1.1rem;
   background:
     linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
@@ -459,15 +396,9 @@
 }
 
 @media (max-width: 760px) {
-
-  .team-hero,
-  .team-hero__inner {
-    min-height: 34rem;
-  }
-
-  .team-hero__inner {
-    padding-top: 6.5rem;
-    padding-bottom: 1rem;
+  .page-about-team::before {
+    background-position: center 13%;
+    background-size: 165% auto;
   }
 
   .team-card {
@@ -477,14 +408,9 @@
 }
 
 @media (max-width: 520px) {
-
-  .team-hero,
-  .team-hero__inner {
-    min-height: 28rem;
-  }
-
-  .team-hero__glass {
-    padding: 1.4rem 0 1.55rem;
+  .page-about-team::before {
+    background-position: center 15%;
+    background-size: 215% auto;
   }
 
   .team-grid {
@@ -503,63 +429,38 @@
   color: #004d89;
 }
 
-.page-about-funding .site-header {
-  position: absolute;
-  inset: 0 0 auto;
-  background: transparent;
-  border-bottom-color: transparent;
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
-
 .page-about-funding main {
   min-height: auto;
 }
 
-.funding-hero {
-  padding: clamp(10rem, 18vw, 13rem) 0 clamp(2.5rem, 5vw, 4rem);
-}
-
 .funding-hero__inner {
-  display: flex;
-  align-items: flex-end;
   min-height: clamp(10rem, 20vw, 14rem);
+  padding-top: clamp(10rem, 18vw, 13rem);
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
 }
 
 .funding-hero__title {
-  margin: 0;
-  color: #ffffff;
   font-size: clamp(2rem, 5vw, 3.2rem);
-  font-weight: 400;
   line-height: 1;
-}
-
-.funding-banner-section {
-  width: 100%;
-  padding: 0;
 }
 
 .funding-banner {
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding: clamp(1rem, 2vw, 1.45rem) 0;
   background: rgba(255, 255, 255, 0.8);
 }
 
-.funding-banner__content {
+.funding-banner__content,
+.funding-banner__content p {
   max-width: 100%;
   color: #004d89;
   font-size: clamp(1.05rem, 1.7vw, 1.45rem);
   line-height: 1.38;
 }
 
-.funding-banner__content > * + * {
+.funding-banner__content>*+* {
   margin-top: 0.6rem;
-}
-
-.funding-banner__content p {
-  margin: 0;
 }
 
 .funding-logos-section {

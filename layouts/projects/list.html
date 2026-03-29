@@ -1,19 +1,19 @@
 {{ define "main" }}
   {{ $projects := hugo.Data.projects }}
 
-  <section class="projects-hero">
-    <div class="projects-hero__media" aria-hidden="true"></div>
-    <div class="shell projects-hero__inner">
-      <div class="projects-hero__copy">
+  <section class="projects-hero section-hero">
+    <div class="projects-hero__media section-hero__media" aria-hidden="true"></div>
+    <div class="shell projects-hero__inner section-hero__inner">
+      <div class="projects-hero__copy section-hero__copy">
         <h1>{{ .Title }}</h1>
       </div>
     </div>
   </section>
 
   {{ with .Content }}
-    <section class="projects-banner">
-      <div class="shell projects-banner__inner">
-        <div class="projects-banner__copy prose">
+    <section class="projects-banner section-banner">
+      <div class="shell projects-banner__inner section-banner__inner">
+        <div class="projects-banner__copy section-banner__copy prose">
           {{ . }}
         </div>
       </div>

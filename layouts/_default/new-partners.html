@@ -3,19 +3,19 @@
   {{ $partnerSection := index (where $projects.sections "id" "new-partner-projects") 0 }}
   {{ $affiliateSection := index (where $projects.sections "id" "affiliates") 0 }}
 
-  <section class="new-partners-hero">
-    <div class="new-partners-hero__media" aria-hidden="true"></div>
-    <div class="shell new-partners-hero__inner">
-      <div class="new-partners-hero__copy">
+  <section class="new-partners-hero section-hero">
+    <div class="new-partners-hero__media section-hero__media" aria-hidden="true"></div>
+    <div class="shell new-partners-hero__inner section-hero__inner">
+      <div class="new-partners-hero__copy section-hero__copy">
         <h1>{{ .Title }}</h1>
       </div>
     </div>
   </section>
 
   {{ with .Content }}
-    <section class="new-partners-banner">
-      <div class="shell new-partners-banner__inner">
-        <div class="new-partners-banner__copy prose">
+    <section class="new-partners-banner section-banner">
+      <div class="shell new-partners-banner__inner section-banner__inner">
+        <div class="new-partners-banner__copy section-banner__copy prose">
           {{ . }}
         </div>
       </div>
@@ -63,9 +63,9 @@
       </div>
     </section>
 
-    <section class="new-partners-affiliates-banner" aria-label="Affiliates programme">
-      <div class="shell new-partners-affiliates-banner__inner">
-        <div class="new-partners-affiliates-banner__copy prose">
+    <section class="new-partners-affiliates-banner section-banner" aria-label="Affiliates programme">
+      <div class="shell new-partners-affiliates-banner__inner section-banner__inner">
+        <div class="new-partners-affiliates-banner__copy section-banner__copy prose">
           {{ with .body_file }}
             {{ if fileExists . }}
               {{ readFile . | markdownify }}

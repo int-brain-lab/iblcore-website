@@ -2,17 +2,20 @@
   {{ $headshots := sort (readDir "static/images/team/headshots-webp") "Name" }}
 
   <div class="team-page">
-    <section class="page-hero">
-      <div class="shell page-shell">
-        <p class="eyebrow">{{ if .CurrentSection }}{{ .CurrentSection.Title }}{{ else }}Page{{ end }}</p>
-        <h1>{{ .Title }}</h1>
-        {{ with .Params.lead }}<p class="lead">{{ . }}</p>{{ end }}
+    <section class="team-hero section-hero">
+      <div class="team-hero__media section-hero__media" aria-hidden="true"></div>
+      <div class="shell team-hero__inner section-hero__inner">
+        <div class="team-hero__copy section-hero__copy">
+          <h1>{{ .Title }}</h1>
+        </div>
       </div>
     </section>
 
-    <section class="section">
-      <div class="shell page-shell prose">
-        {{ .Content }}
+    <section class="team-intro-banner section-banner">
+      <div class="shell page-shell section-banner__inner">
+        <div class="prose team-intro-banner__copy section-banner__copy">
+          {{ .Content }}
+        </div>
       </div>
     </section>
 

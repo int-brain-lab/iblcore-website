@@ -27,38 +27,8 @@
   z-index: 1;
 }
 
-.faq-hero {
-  position: relative;
-  min-height: var(--faq-hero-min-height);
-  padding: 0;
-}
-
-.faq-hero__media {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 28%, rgba(1, 18, 43, 0.58) 100%);
-}
-
 .faq-hero__inner {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  align-items: flex-end;
   min-height: var(--faq-hero-min-height);
-  padding-top: 12rem;
-  padding-bottom: 2.15rem;
-}
-
-.faq-hero__copy {
-  max-width: 44rem;
-}
-
-.faq-hero h1 {
-  margin: 0;
-  color: #ffffff;
-  font-size: var(--font-size-page-hero-title);
-  line-height: 0.98;
-  font-weight: 400;
 }
 
 .faq-sections {

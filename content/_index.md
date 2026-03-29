@@ -1,6 +1,7 @@
 ---
 title: "IBL-Core"
 description: "Provisional homepage for the new IBL-Core website."
+header_variant: "landing"
 resource_cards:
   - title: "Data"
     description: "Datasets, access paths, and reproducible analysis entry points."
