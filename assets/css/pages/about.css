@@ -388,7 +388,7 @@
 
 .team-hero__glass {
   width: 100%;
-  padding: 1.6rem 0 1.75rem;
+  padding: 2.35rem 0 2.5rem;
 }
 
 .team-hero__glass .prose {
@@ -407,7 +407,7 @@
 }
 
 .team-grid-section {
-  padding: 1.6rem 0 4.5rem;
+  padding: 3rem 0 4.5rem;
   background: #01021e;
 }
 
@@ -484,7 +484,7 @@
   }
 
   .team-hero__glass {
-    padding: 1rem 0 1.1rem;
+    padding: 1.4rem 0 1.55rem;
   }
 
   .team-grid {
