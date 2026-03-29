@@ -288,3 +288,211 @@
     padding: 1rem 0.9rem 0.9rem;
   }
 }
+
+.page-about-team {
+  background: #01021e;
+  color: #ffffff;
+}
+
+.page-about-team .site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  background: linear-gradient(180deg, rgba(1, 2, 30, 0.72) 0%, rgba(1, 2, 30, 0.4) 72%, rgba(1, 2, 30, 0) 100%);
+  border-bottom-color: transparent;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 20;
+}
+
+.page-about-team .site-nav a {
+  color: #ffffff;
+}
+
+.page-about-team .site-nav a[aria-current="page"] {
+  color: #009fd7;
+}
+
+.team-page {
+  background:
+    radial-gradient(circle at top center, rgba(0, 159, 215, 0.12), transparent 44%),
+    #01021e;
+}
+
+.team-hero {
+  position: relative;
+  overflow: hidden;
+  min-height: 44rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background:
+    linear-gradient(180deg, rgba(1, 2, 30, 0.2) 0%, rgba(1, 2, 30, 0.38) 46%, rgba(1, 2, 30, 0.82) 100%),
+    #01021e;
+}
+
+.team-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/team/ibl-brain.webp");
+  background-position: center 42%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.team-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(1, 2, 30, 0.18) 0%, rgba(1, 2, 30, 0.2) 24%, rgba(1, 2, 30, 0.65) 75%, #01021e 100%),
+    linear-gradient(90deg, rgba(0, 159, 215, 0.18) 0%, transparent 34%, transparent 66%, rgba(0, 159, 215, 0.08) 100%);
+}
+
+.team-hero__inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  min-height: 45rem;
+  padding-top: 8rem;
+  padding-bottom: 1.15rem;
+}
+
+.team-hero__content {
+  width: 100%;
+}
+
+.team-hero__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: var(--font-size-page-hero-title);
+  line-height: 0.98;
+  font-weight: 400;
+}
+
+.team-hero__band {
+  position: relative;
+  z-index: 1;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(180deg, rgba(100, 161, 214, 0.18), rgba(45, 63, 111, 0.36));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px) saturate(135%);
+  -webkit-backdrop-filter: blur(14px) saturate(135%);
+}
+
+.team-hero__glass {
+  width: 100%;
+  padding: 1.6rem 0 1.75rem;
+}
+
+.team-hero__glass .prose {
+  max-width: min(100%, 73rem);
+}
+
+.team-hero__glass .prose>*+* {
+  margin-top: 1rem;
+}
+
+.team-hero__glass p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: var(--font-size-page-copy-compact);
+  line-height: 1.32;
+}
+
+.team-grid-section {
+  padding: 1.6rem 0 4.5rem;
+  background: #01021e;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.6rem 1.35rem;
+}
+
+.team-card {
+  flex: 0 1 calc((100% - (4 * 1.35rem)) / 5);
+  min-width: 0;
+  max-width: calc((100% - (4 * 1.35rem)) / 5);
+  margin: 0;
+}
+
+.team-card__frame {
+  position: relative;
+  overflow: hidden;
+  border: 1.5px solid #009fd7;
+  border-radius: 1.1rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02)),
+    rgba(255, 255, 255, 0.02);
+}
+
+.team-card__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: grayscale(1);
+}
+
+.team-card__name {
+  margin-top: 0.55rem;
+  color: #ffffff;
+  font-size: var(--font-size-page-copy-compact);
+  line-height: 1.05;
+  text-align: left;
+}
+
+@media (max-width: 1100px) {
+  .team-card {
+    flex-basis: calc((100% - (3 * 1.35rem)) / 4);
+    max-width: calc((100% - (3 * 1.35rem)) / 4);
+  }
+}
+
+@media (max-width: 760px) {
+
+  .team-hero,
+  .team-hero__inner {
+    min-height: 34rem;
+  }
+
+  .team-hero__inner {
+    padding-top: 6.5rem;
+    padding-bottom: 1rem;
+  }
+
+  .team-card {
+    flex-basis: calc((100% - (2 * 1rem)) / 3);
+    max-width: calc((100% - (2 * 1rem)) / 3);
+  }
+}
+
+@media (max-width: 520px) {
+
+  .team-hero,
+  .team-hero__inner {
+    min-height: 28rem;
+  }
+
+  .team-hero__glass {
+    padding: 1rem 0 1.1rem;
+  }
+
+  .team-grid {
+    gap: 1rem;
+  }
+
+  .team-card {
+    flex-basis: calc((100% - 1rem) / 2);
+    max-width: calc((100% - 1rem) / 2);
+  }
+}

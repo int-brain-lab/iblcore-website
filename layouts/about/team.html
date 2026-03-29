@@ -1,0 +1,44 @@
+{{ define "main" }}
+  {{ $headshots := sort (readDir "static/images/team/headshots-webp") "Name" }}
+
+  <div class="team-page">
+    <section class="team-hero">
+      <div class="shell team-hero__inner">
+        <div class="team-hero__content">
+          <h1 class="team-hero__title">{{ .Title }}</h1>
+        </div>
+      </div>
+
+      <div class="team-hero__band">
+        <div class="shell">
+          <div class="team-hero__glass">
+            <div class="prose">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="team-grid-section">
+      <div class="shell">
+        <div class="team-grid" aria-label="Team members">
+          {{ range $headshots }}
+            {{ $name := replace (replaceRE "\\.[^.]+$" "" .Name) "_" " " }}
+            <figure class="team-card">
+              <div class="team-card__frame">
+                <img
+                  class="team-card__image"
+                  src="{{ printf "/images/team/headshots-webp/%s" .Name | relURL }}"
+                  alt="{{ $name }}"
+                  loading="lazy"
+                  decoding="async">
+              </div>
+              <figcaption class="team-card__name">{{ $name }}</figcaption>
+            </figure>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  </div>
+{{ end }}

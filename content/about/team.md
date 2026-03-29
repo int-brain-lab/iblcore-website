@@ -1,7 +1,10 @@
 ---
-title: "Team"
+title: "The Team"
 description: "People, roles, and governance."
 lead: "Introduce the core team, their roles, and how governance is handled."
+layout: "team"
+body_class: "page-about-team"
+hero_alt: "Stylized brain illustration"
 weight: 10
 ---
 
