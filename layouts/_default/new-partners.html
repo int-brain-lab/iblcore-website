@@ -1,0 +1,83 @@
+{{ define "main" }}
+  {{ $projects := hugo.Data.projects }}
+  {{ $partnerSection := index (where $projects.sections "id" "new-partner-projects") 0 }}
+  {{ $affiliateSection := index (where $projects.sections "id" "affiliates") 0 }}
+
+  <section class="new-partners-hero">
+    <div class="new-partners-hero__media" aria-hidden="true"></div>
+    <div class="shell new-partners-hero__inner">
+      <div class="new-partners-hero__copy">
+        <h1>{{ .Title }}</h1>
+      </div>
+    </div>
+  </section>
+
+  {{ with .Content }}
+    <section class="new-partners-banner">
+      <div class="shell new-partners-banner__inner">
+        <div class="new-partners-banner__copy prose">
+          {{ . }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ with $partnerSection }}
+    <section class="new-partners-section" id="{{ .id }}" aria-label="New partner projects">
+      <div class="shell">
+        <div class="new-partners-cards">
+          {{ range .items }}
+            {{ $fullTitle := or .title .name }}
+            {{ $authorRaw := replaceRE "\\s*:\\s*.*$" "" $fullTitle }}
+            {{ $author := title (lower (replace $authorRaw ", " " | ")) }}
+            {{ $projectTitle := replaceRE "^[^:]+\\s*:\\s*" "" $fullTitle }}
+            <article class="new-partners-card">
+              <header class="new-partners-card__header">
+                <p class="new-partners-card__authors">{{ $author }}</p>
+                {{ if ne $projectTitle $fullTitle }}
+                  <h3>{{ upper $projectTitle }}</h3>
+                {{ end }}
+              </header>
+              <div class="new-partners-card__body prose">
+                {{ with .body_file }}
+                  {{ if fileExists . }}
+                    {{ readFile . | markdownify }}
+                  {{ else }}
+                    <p>Project description file not found: <code>{{ . }}</code></p>
+                  {{ end }}
+                {{ end }}
+              </div>
+            </article>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ with $affiliateSection }}
+    <section class="new-partners-affiliates" id="{{ .id }}" aria-label="Affiliates">
+      <div class="shell">
+        <header class="new-partners-affiliates__header">
+          <h2>{{ .title }}</h2>
+        </header>
+      </div>
+    </section>
+
+    <section class="new-partners-affiliates-banner" aria-label="Affiliates programme">
+      <div class="shell new-partners-affiliates-banner__inner">
+        <div class="new-partners-affiliates-banner__copy prose">
+          {{ with .body_file }}
+            {{ if fileExists . }}
+              {{ readFile . | markdownify }}
+            {{ end }}
+          {{ end }}
+        </div>
+        <div class="new-partners-affiliates__list" role="list" aria-label="List of affiliates who joined in 2026">
+          {{ range .items }}
+            <span role="listitem">{{ or .title .name }}</span>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+{{ end }}

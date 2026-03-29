@@ -37,7 +37,7 @@ sections:
         body_file: "content/projects/descriptions/partner/tyson.md"
       - title: "MATHIAS MAHN, ANDREAS LUTHI : Brain-Wide Dynamics During Cost-Benefit Decision-Making"
         body_file: "content/projects/descriptions/partner/mahn.md"
-      - title: "ANDREAS TOLIAS, JAMES COTTON"
+      - title: "ANDREAS TOLIAS, JAMES COTTON : Project: Foundation model for macaque behavioral"
         body_file: "content/projects/descriptions/partner/tolias.md"
 
   - id: "affiliates"
