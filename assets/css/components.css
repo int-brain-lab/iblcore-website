@@ -73,8 +73,8 @@
 .page-controller__link {
   display: inline-grid;
   place-items: center;
-  width: 2.45rem;
-  height: 2.45rem;
+  width: var(--controller-button-size);
+  height: var(--controller-button-size);
   border-radius: 999px;
   background: var(--color-surface);
   box-shadow:
@@ -89,8 +89,8 @@
 }
 
 .page-controller__link img {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: var(--controller-icon-size);
+  height: var(--controller-icon-size);
 }
 
 @media (max-width: 700px) {

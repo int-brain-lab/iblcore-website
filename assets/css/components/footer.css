@@ -22,7 +22,7 @@
 .site-brand--footer img {
   display: block;
   width: auto;
-  height: 8rem;
+  height: var(--footer-logo-height);
   max-width: none;
 }
 
@@ -76,7 +76,7 @@
   align-items: center;
   gap: var(--space-md);
   grid-column: 3;
-  margin-top: -4.55rem;
+  margin-top: var(--footer-social-offset);
 }
 
 .site-footer__social-link {
@@ -97,7 +97,7 @@
 
 .site-footer__social-link img {
   display: block;
-  width: 2.85rem;
+  width: var(--footer-social-icon-size);
   height: auto;
 }
 
@@ -196,7 +196,7 @@
   }
 
   .site-brand--footer img {
-    height: 6rem;
+    height: var(--footer-logo-height-md);
   }
 
   .site-footer__nav {
@@ -259,7 +259,7 @@
 
 @media (max-width: 420px) {
   .site-brand--footer img {
-    height: 5rem;
+    height: var(--footer-logo-height-sm);
   }
 
   .site-footer__nav {

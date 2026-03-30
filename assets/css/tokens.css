@@ -2,7 +2,11 @@
   /* Scale */
   --type-scale-base: 0.66;
 
-  /* Core colors */
+  /* Core colors
+     - surface*: fills/backgrounds
+     - text*: foreground text colors
+     - accent*: brand blues
+     - dark/deeper: dark page surfaces */
   --color-bg: #ffffff;
   --color-surface: #ffffff;
   --color-surface-strong: rgba(255, 255, 255, 0.98);
@@ -156,6 +160,34 @@
   --hero-copy-max-width: 44rem;
   --section-banner-pad-y: 2.25rem;
   --section-banner-pad-y-sm: 1.5rem;
+  --footer-logo-height: 8rem;
+  --footer-logo-height-md: 6rem;
+  --footer-logo-height-sm: 5rem;
+  --header-logo-height: 4.9rem;
+  --header-logo-height-landing: 7.5rem;
+  --header-logo-height-landing-sm: 5.75rem;
+  --nav-flyout-min-width: 8.5rem;
+  --nav-flyout-offset: 0.35rem;
+  --nav-flyout-radius: 1.35rem;
+  --nav-touch-target: 2.25rem;
+  --nav-touch-target-landing: 2rem;
+  --nav-touch-target-mobile: 2.4rem;
+  --footer-social-icon-size: 2.85rem;
+  --footer-social-offset: -4.55rem;
+  --controller-button-size: 2.45rem;
+  --controller-icon-size: 1.35rem;
+  --landing-shell-mobile-width: 56rem;
+  --landing-support-logo-max-width: 8.75rem;
+  --landing-support-gap: 2rem;
+  --landing-support-gap-sm: 0.9rem;
+  --landing-support-gap-xs: 0.8rem;
+  --landing-nav-gap-compact: 0.4rem;
+  --landing-nav-offset: 4.7rem;
+  --landing-nav-offset-md: 3.6rem;
+  --landing-nav-offset-sm: 0.85rem;
+  --landing-header-top-pad: 1.7rem;
+  --landing-header-top-pad-sm: 1.2rem;
+  --landing-mobile-panel-radius: 1rem;
   --faq-hero-min-height: 32rem;
   --faq-group-gap: 2.5rem;
   --faq-group-pad-y: 2.15rem;

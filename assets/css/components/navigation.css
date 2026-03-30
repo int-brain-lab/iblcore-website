@@ -23,12 +23,12 @@
 }
 
 .site-header--landing .site-header__inner {
-  padding: 1.7rem 0 0;
+  padding: var(--landing-header-top-pad) 0 0;
   align-items: flex-start;
 }
 
 .site-header--landing .site-nav {
-  margin-top: 4.7rem;
+  margin-top: var(--landing-nav-offset);
 }
 
 .site-brand {
@@ -41,11 +41,11 @@
 .site-brand img {
   display: block;
   width: auto;
-  height: 4.9rem;
+  height: var(--header-logo-height);
 }
 
 .site-header--landing .site-brand img {
-  height: 7.5rem;
+  height: var(--header-logo-height-landing);
 }
 
 .site-nav > ul {
@@ -60,7 +60,7 @@
 .site-header--landing .site-nav > ul {
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 0.4rem;
+  gap: var(--landing-nav-gap-compact);
   max-width: 42rem;
 }
 
@@ -75,16 +75,16 @@
 
 .site-nav__submenu {
   position: absolute;
-  top: calc(100% + var(--space-panel-sm));
+  top: calc(100% + var(--nav-flyout-offset));
   left: 50%;
   z-index: 30;
   display: grid;
   gap: var(--space-panel-sm);
-  min-width: 8.5rem;
+  min-width: var(--nav-flyout-min-width);
   margin: 0;
   padding: var(--space-panel-md);
   border: 1px solid var(--color-nav-submenu-border);
-  border-radius: 1.35rem;
+  border-radius: var(--nav-flyout-radius);
   background: var(--color-nav-submenu-bg);
   box-shadow: 0 18px 40px var(--color-nav-submenu-shadow);
   list-style: none;
@@ -118,7 +118,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 2.25rem;
+  min-height: var(--nav-touch-target);
   padding: var(--space-panel-sm) var(--space-text-md);
   border-radius: 999px;
   font-size: 1rem;
@@ -167,7 +167,7 @@
 }
 
 .site-header--landing .site-nav a {
-  min-height: 2rem;
+  min-height: var(--nav-touch-target-landing);
   padding: 0.25rem 0.6rem;
   color: var(--color-text-soft);
   background: var(--color-accent);
@@ -258,7 +258,7 @@
 
 @media (max-width: 700px) {
   .site-header--landing .site-nav {
-    margin-top: 3.6rem;
+    margin-top: var(--landing-nav-offset-md);
   }
 }
 
@@ -339,19 +339,19 @@
   }
 
   .site-header--landing .site-header__inner {
-    padding-top: 1.2rem;
+    padding-top: var(--landing-header-top-pad-sm);
   }
 
   .site-header--landing .site-brand img {
-    height: 5.75rem;
+    height: var(--header-logo-height-landing-sm);
   }
 
   .site-header--landing .site-nav {
     grid-column: 1 / -1;
-    margin-top: 0.85rem;
+    margin-top: var(--landing-nav-offset-sm);
     padding: var(--space-sm);
     border: 1px solid var(--color-landing-mobile-nav-border);
-    border-radius: 1rem;
+    border-radius: var(--landing-mobile-panel-radius);
     background: var(--color-landing-mobile-nav-bg);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
@@ -365,8 +365,8 @@
   .site-header--landing .site-nav a {
     width: 100%;
     justify-content: flex-start;
-    min-height: 2.4rem;
+    min-height: var(--nav-touch-target-mobile);
     padding: var(--space-xs) var(--space-panel-lg);
-    border-radius: 0.85rem;
+    border-radius: var(--space-panel-lg);
   }
 }
