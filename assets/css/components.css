@@ -178,8 +178,8 @@
   justify-content: center;
   min-height: 0;
   padding: 0.45rem 0.6rem;
-  color: var(--color-text);
-  background: transparent;
+  color: #ffffff;
+  background: #004d89;
   font-size: 0.95rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -203,8 +203,13 @@
 .site-header--landing .site-nav__submenu a[aria-current="page"],
 .site-header--landing .site-nav__submenu a:hover,
 .site-header--landing .site-nav__submenu a:focus-visible {
-  color: var(--color-accent);
-  background: var(--color-surface-muted);
+  color: #004d89;
+  background: #ffffff;
+}
+
+.site-header--landing .site-nav__submenu a[aria-current="page"] {
+  color: #ffffff;
+  background: #009fd7;
 }
 
 .nav-toggle {
@@ -634,35 +639,6 @@
   }
 }
 
-.page-home .site-header__inner {
-  padding: 2.2rem 0 0;
-}
-
-.page-home .site-brand img {
-  height: 8.5rem;
-}
-
-.page-home .site-nav a {
-  color: #ffffff;
-  background: var(--color-accent);
-  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06);
-}
-
-.page-home .nav-toggle:hover,
-.page-home .nav-toggle:focus-visible {
-  background: rgba(255, 255, 255, 0.16);
-  outline: none;
-}
-
-.page-home .site-nav a:hover,
-.page-home .site-nav a:focus-visible,
-.page-home .link-list a:hover,
-.page-home .link-list a:focus-visible {
-  color: var(--color-accent);
-  background: #ffffff;
-  outline: none;
-}
-
 .page-home .site-footer {
   background: linear-gradient(180deg, #13558f 0%, #155589 100%);
   border-top: 4px solid rgba(196, 247, 255, 0.9);
@@ -731,31 +707,6 @@
     align-items: flex-start;
     gap: 0.5rem;
     padding-top: var(--space-sm);
-  }
-
-  .page-home .site-header__inner {
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    padding-top: 1.25rem;
-  }
-
-  .page-home .site-nav {
-    grid-column: 1 / -1;
-    margin-top: 0.85rem;
-    padding: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 1rem;
-    background: rgba(3, 36, 88, 0.74);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-  }
-
-  .page-home .site-nav a {
-    width: 100%;
-    justify-content: flex-start;
-    min-height: 2.6rem;
-    padding: 0.5rem 0.9rem;
-    border-radius: 0.85rem;
   }
 
   .page-home .site-footer__inner {
