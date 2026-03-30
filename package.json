@@ -5,6 +5,7 @@
     "capture:landing": "node scripts/capture-landing.mjs"
   },
   "devDependencies": {
-    "playwright": "^1.54.2"
+    "playwright": "^1.54.2",
+    "wrangler": "^4.78.0"
   }
 }
