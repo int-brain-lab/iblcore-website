@@ -66,7 +66,7 @@
   padding: 0.35rem;
   border-radius: 999px;
   background: var(--color-controller-bg);
-  box-shadow: 0 10px 24px var(--color-shadow-soft-dark);
+  box-shadow: 0 10px 24px var(--color-shadow-soft);
   pointer-events: auto;
 }
 
@@ -78,7 +78,7 @@
   border-radius: 999px;
   background: var(--color-surface);
   box-shadow:
-    0 3px 8px var(--color-shadow-soft-dark),
+    0 3px 8px var(--color-shadow-soft),
     inset 0 0 0 1px var(--color-controller-inset);
 }
 

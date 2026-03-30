@@ -291,7 +291,7 @@
 
 .page-about-team {
   position: relative;
-  background: var(--color-page-dark);
+  background: var(--color-surface-dark);
   color: var(--color-surface);
 }
 
@@ -350,7 +350,7 @@
 
 .team-grid-section {
   padding: 3rem 0 4.5rem;
-  background: var(--color-page-dark-deep);
+  background: var(--color-surface-deep);
 }
 
 .team-grid {
@@ -430,7 +430,7 @@
 
 
 .page-about-funding {
-  background: var(--color-page-dark-alt) url("/images/ibl-funding.webp") center top / cover no-repeat;
+  background: var(--color-surface-darker) url("/images/ibl-funding.webp") center top / cover no-repeat;
   color: var(--color-accent);
 }
 
@@ -487,7 +487,7 @@
   aspect-ratio: 1;
   padding: 0.7rem;
   background: var(--color-funding-logo-bg);
-  box-shadow: 0 10px 24px var(--color-shadow-soft-dark);
+  box-shadow: 0 10px 24px var(--color-shadow-soft);
 }
 
 .funding-logo-card img {

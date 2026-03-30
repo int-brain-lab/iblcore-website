@@ -1,9 +1,16 @@
 :root {
+  /* Scale */
   --type-scale-base: 0.66;
+
+  /* Core colors */
   --color-bg: #ffffff;
   --color-surface: #ffffff;
+  --color-surface-strong: rgba(255, 255, 255, 0.98);
   --color-surface-muted: #ffffff;
   --color-surface-accent: #009fd7;
+  --color-surface-dark: #06264b;
+  --color-surface-darker: #071f46;
+  --color-surface-deep: #01021e;
   --color-text: #004d89;
   --color-text-soft: #ffffff;
   --color-text-bright: #f9fdfe;
@@ -16,11 +23,11 @@
   --color-accent-soft: #009fd7;
   --color-support-band: #50bce3;
   --color-divider-soft: #d3eef8;
-  --color-hero-panel: #0a2c61;
-  --color-hero-links: #0a4f89;
   --color-home-bg: #145589;
-  --color-white-strong: rgba(255, 255, 255, 0.98);
-  --color-shadow-soft-dark: rgba(0, 0, 0, 0.18);
+  --color-home-hero-panel: #0a2c61;
+  --color-shadow-soft: rgba(0, 0, 0, 0.18);
+
+  /* Navigation and footer */
   --color-nav-submenu-border: rgba(124, 151, 180, 0.4);
   --color-nav-submenu-bg: rgba(255, 255, 255, 0.5);
   --color-nav-submenu-shadow: rgba(4, 27, 62, 0.28);
@@ -40,13 +47,12 @@
   --color-home-footer-top: #13558f;
   --color-home-footer-bottom: #155589;
   --color-home-footer-border: rgba(196, 247, 255, 0.9);
+
+  /* Page imagery and overlays */
   --color-about-hero-bg: #07264d;
   --color-about-hero-overlay-top: rgba(1, 18, 43, 0.18);
   --color-about-hero-overlay-mid: rgba(1, 18, 43, 0.1);
   --color-about-hero-overlay-bottom: rgba(0, 17, 43, 0.56);
-  --color-page-dark: #06264b;
-  --color-page-dark-alt: #071f46;
-  --color-page-dark-deep: #01021e;
   --color-team-border: #8fdcff;
   --color-team-overlay-top: rgba(2, 18, 45, 0.12);
   --color-team-overlay-faint: rgba(2, 18, 45, 0.04);
@@ -72,6 +78,8 @@
   --color-button-inset-light: rgba(255, 255, 255, 0.08);
   --color-accent-strong: rgba(0, 77, 137, 0.95);
   --color-about-divider: rgba(255, 255, 255, 0.24);
+
+  /* Global primitives */
   --shadow-soft: none;
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
@@ -84,16 +92,18 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 5rem;
+
+  /* Layout */
   --shell-width: 1280px;
   --shell-page: 1280px;
   --shell-narrow: 46rem;
-  --content-width-frame: var(--shell-width);
   --content-width-copy: 1040px;
   --content-width-wide-copy: 1276px;
-  --content-width-panel: 1280px;
   --content-width-panel-copy: 1207px;
   --content-inset-panel-x: 50px;
   --content-gap-cta: 66px;
+
+  /* Page-specific layout helpers */
   --about-intro-pad-top: 60px;
   --about-intro-pad-bottom: 118px;
   --about-intro-copy-line-height: 40px;
@@ -104,14 +114,14 @@
   --faq-hero-min-height: 32rem;
   --faq-group-gap: 2.5rem;
   --faq-group-pad-y: 2.15rem;
-  --faq-group-pad-x: clamp(1.15rem, 2vw, 2rem);
   --faq-surface-dark: rgba(0, 77, 137, 0.5);
   --faq-surface-light: rgba(213, 238, 248, 0.5);
   --faq-title-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-to-copy));
   --faq-question-size: calc(var(--font-size-page-copy) * 1.12);
   --faq-answer-size: var(--font-size-page-copy);
-  --section-pad-about-intro-y: 3rem;
   --section-pad-about-work-y: 2.75rem;
+
+  /* Typography */
   --button-pill-min-height: calc(5.3rem * var(--type-scale-base));
   --button-pill-pad-y: 0.2rem;
   --button-pill-pad-x: calc(2.27rem * var(--type-scale-base));
@@ -124,7 +134,6 @@
   --font-size-intro-copy: calc(1.875rem * var(--type-scale-base));
   --font-size-page-copy: calc(2.37rem * var(--type-scale-base));
   --font-size-page-copy-compact: calc(1.82rem * var(--type-scale-base));
-  --font-size-cta: calc(1.875rem * var(--type-scale-base));
   --font-size-section-title: calc(2.875rem * var(--type-scale-base));
   --font-size-section-copy: calc(1.875rem * var(--type-scale-base));
   --font-size-card-title: calc(2.0625rem * var(--type-scale-base));
