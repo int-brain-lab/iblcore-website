@@ -60,6 +60,49 @@
   line-height: 1.28;
 }
 
+:is(.page-faq, .page-projects, .page-new-partners) {
+  position: relative;
+  background: var(--color-page-dark);
+  color: var(--color-surface);
+}
+
+:is(.page-faq, .page-projects, .page-new-partners)::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    linear-gradient(180deg, var(--color-page-overlay-top) 0%, var(--color-page-overlay-bottom) 100%),
+    var(--page-backdrop-image);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: var(--page-backdrop-size, cover);
+  background-color: var(--color-page-dark);
+}
+
+:is(.page-faq, .page-projects, .page-new-partners)::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(180deg, var(--color-page-overlay-soft-top) 0%, var(--color-page-overlay-soft-bottom) 100%);
+}
+
+:is(.page-faq, .page-projects, .page-new-partners) .site-footer {
+  position: relative;
+  z-index: 1;
+}
+
+:is(.project-cards, .new-partners-cards) {
+  display: grid;
+  gap: 1.25rem;
+}
+
+:is(.project-card, .new-partners-card) {
+  padding: 1.5rem;
+  border-radius: 0.85rem;
+}
+
 @media (max-width: 760px) {
   .section-hero,
   .section-hero__inner {
@@ -85,6 +128,28 @@
 
   .section-banner__inner {
     padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  :is(.project-card, .new-partners-card) {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  :is(.faq-hero__inner, .projects-hero__inner, .new-partners-hero__inner) {
+    padding-top: 10rem;
+  }
+}
+
+@media (max-width: 700px) {
+  :is(.faq-hero, .projects-hero, .new-partners-hero),
+  :is(.faq-hero__inner, .projects-hero__inner, .new-partners-hero__inner) {
+    min-height: 27rem;
+  }
+
+  :is(.faq-hero__inner, .projects-hero__inner, .new-partners-hero__inner) {
+    padding-top: 8.5rem;
     padding-bottom: 1.5rem;
   }
 }

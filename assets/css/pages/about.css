@@ -91,7 +91,7 @@
 .about-section__header h2 {
   margin: 0;
   color: var(--color-accent-soft);
-  font-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-over-copy));
+  font-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-to-copy));
   line-height: 0.98;
   font-weight: 400;
 }
@@ -193,7 +193,7 @@
 .about-mission-card h3 {
   margin: 1rem 0 1.55rem;
   color: var(--color-surface);
-  font-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-over-copy));
+  font-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-to-copy));
   line-height: 1.02;
   font-weight: 400;
 }

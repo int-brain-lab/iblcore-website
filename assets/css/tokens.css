@@ -1,5 +1,5 @@
 :root {
-  --type-scale-prototype: 0.66;
+  --type-scale-base: 0.66;
   --color-bg: #ffffff;
   --color-surface: #ffffff;
   --color-surface-muted: #ffffff;
@@ -107,42 +107,42 @@
   --faq-group-pad-x: clamp(1.15rem, 2vw, 2rem);
   --faq-surface-dark: rgba(0, 77, 137, 0.5);
   --faq-surface-light: rgba(213, 238, 248, 0.5);
-  --faq-title-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-over-copy));
+  --faq-title-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-to-copy));
   --faq-question-size: calc(var(--font-size-page-copy) * 1.12);
   --faq-answer-size: var(--font-size-page-copy);
   --section-pad-about-intro-y: 3rem;
   --section-pad-about-work-y: 2.75rem;
-  --button-pill-min-height: calc(5.3rem * var(--type-scale-prototype));
+  --button-pill-min-height: calc(5.3rem * var(--type-scale-base));
   --button-pill-pad-y: 0.2rem;
-  --button-pill-pad-x: calc(2.27rem * var(--type-scale-prototype));
-  --button-pill-font-size: calc(2.35rem * var(--type-scale-prototype));
+  --button-pill-pad-x: calc(2.27rem * var(--type-scale-base));
+  --button-pill-font-size: calc(2.35rem * var(--type-scale-base));
   --button-pill-letter-spacing: 0.04em;
-  --font-ratio-title-over-copy: 1.5333;
+  --font-ratio-title-to-copy: 1.5333;
   --font-sans: "Ubuntu Condensed", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-size-hero-title: calc(3.5rem * var(--type-scale-prototype));
-  --font-size-page-hero-title: calc(4.1rem * var(--type-scale-prototype));
-  --font-size-intro-copy: calc(1.875rem * var(--type-scale-prototype));
-  --font-size-page-copy: calc(2.37rem * var(--type-scale-prototype));
-  --font-size-page-copy-compact: calc(1.82rem * var(--type-scale-prototype));
-  --font-size-cta: calc(1.875rem * var(--type-scale-prototype));
-  --font-size-section-title: calc(2.875rem * var(--type-scale-prototype));
-  --font-size-section-copy: calc(1.875rem * var(--type-scale-prototype));
-  --font-size-card-title: calc(2.0625rem * var(--type-scale-prototype));
-  --font-size-card-copy: calc(1.4375rem * var(--type-scale-prototype));
-  --font-size-support-title: calc(2.875rem * var(--type-scale-prototype));
-  --font-size-support-copy: calc(1.875rem * var(--type-scale-prototype));
-  --font-size-footer-nav: calc(1.75rem * var(--type-scale-prototype));
-  --font-size-footer-legal: calc(0.9375rem * var(--type-scale-prototype));
+  --font-size-hero-title: calc(3.5rem * var(--type-scale-base));
+  --font-size-page-hero-title: calc(4.1rem * var(--type-scale-base));
+  --font-size-intro-copy: calc(1.875rem * var(--type-scale-base));
+  --font-size-page-copy: calc(2.37rem * var(--type-scale-base));
+  --font-size-page-copy-compact: calc(1.82rem * var(--type-scale-base));
+  --font-size-cta: calc(1.875rem * var(--type-scale-base));
+  --font-size-section-title: calc(2.875rem * var(--type-scale-base));
+  --font-size-section-copy: calc(1.875rem * var(--type-scale-base));
+  --font-size-card-title: calc(2.0625rem * var(--type-scale-base));
+  --font-size-card-copy: calc(1.4375rem * var(--type-scale-base));
+  --font-size-support-title: calc(2.875rem * var(--type-scale-base));
+  --font-size-support-copy: calc(1.875rem * var(--type-scale-base));
+  --font-size-footer-nav: calc(1.75rem * var(--type-scale-base));
+  --font-size-footer-legal: calc(0.9375rem * var(--type-scale-base));
 }
 
 @media (max-width: 700px) {
   :root {
-    --type-scale-prototype: 0.62;
+    --type-scale-base: 0.62;
   }
 }
 
 @media (max-width: 420px) {
   :root {
-    --type-scale-prototype: 0.58;
+    --type-scale-base: 0.58;
   }
 }
