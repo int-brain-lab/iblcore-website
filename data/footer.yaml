@@ -1,0 +1,66 @@
+columns:
+  - links:
+      - label: About
+        url: /about/
+        active: true
+      - label: Resources
+        placeholder: true
+      - label: Projects
+        url: /projects/
+        active: true
+      - label: Sitemap
+        placeholder: true
+  - links:
+      - label: Publications
+        placeholder: true
+      - label: Events
+        placeholder: true
+      - label: News
+        placeholder: true
+      - label: Team
+        url: /about/team/
+  - links:
+      - label: Privacy Policy
+        placeholder: true
+      - label: Terms of Use
+        placeholder: true
+      - label: Cookie Policy
+        placeholder: true
+  - links:
+      - label: Accessibility Statement
+        placeholder: true
+      - label: Funding
+        url: /about/funding/
+      - label: Legal Notice
+        placeholder: true
+
+social_links:
+  - label: International Brain Laboratory on GitHub
+    url: https://github.com/int-brain-lab/
+    icon: svg/icon_social_github.svg
+    width: 47
+    height: 45
+  - label: International Brain Laboratory on YouTube
+    url: https://www.youtube.com/@intbrainlab
+    icon: svg/icon_social_youtube.svg
+    width: 47
+    height: 45
+  - label: International Brain Laboratory on X
+    url: https://x.com/intbrainlab
+    icon: svg/icon_social_x.svg
+    width: 47
+    height: 45
+
+legal_links:
+  - label: Privacy Policy
+    placeholder: true
+  - label: Terms of Use
+    placeholder: true
+  - label: Cookie Policy
+    placeholder: true
+  - label: Accessibility
+    placeholder: true
+  - label: Funding Acknowledgement
+    placeholder: true
+  - label: Contact
+    url: /about/contact/

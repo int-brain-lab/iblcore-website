@@ -1,0 +1,36 @@
+header:
+  - key: about
+    title: About
+    url: /about/
+    children:
+      - title: Who We Are
+        url: /about/
+      - title: The Team
+        url: /about/team/
+      - title: FAQ
+        url: /about/faq/
+      - title: Funding
+        url: /about/funding/
+  - key: resources
+    title: Resources
+    disabled: true
+  - key: projects
+    title: Projects
+    url: /projects/
+    children:
+      - title: Ongoing Projects
+        url: /projects/#ibl-research-projects
+      - title: New Partner Projects
+        url: /new-partner-projects/
+  - key: publications
+    title: Publications
+    disabled: true
+  - key: events
+    title: Events
+    disabled: true
+  - key: contact
+    title: Contact
+    url: /about/contact/
+  - key: news
+    title: News
+    disabled: true

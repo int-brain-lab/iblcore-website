@@ -17,7 +17,7 @@
 .section-hero__media {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 28%, rgba(1, 18, 43, 0.58) 100%);
+  background: linear-gradient(180deg, var(--color-transparent) 28%, var(--color-page-banner-overlay-bottom) 100%);
 }
 
 .section-hero__inner {
@@ -36,7 +36,7 @@
 
 .section-hero h1 {
   margin: 0;
-  color: #ffffff;
+  color: var(--color-surface);
   font-size: var(--font-size-page-hero-title);
   line-height: 0.98;
   font-weight: 400;
@@ -55,7 +55,7 @@
 .section-banner__copy,
 .section-banner__copy p {
   margin: 0;
-  color: #ffffff;
+  color: var(--color-surface);
   font-size: var(--font-size-page-copy);
   line-height: 1.28;
 }

@@ -1,41 +1,5 @@
 {{ $footerVariant := .Params.footer_variant | default "non-landing" }}
-{{ $footerColumns := slice
-  (slice
-    (dict "label" "About" "url" "/about/" "active" true)
-    (dict "label" "Resources" "placeholder" true)
-    (dict "label" "Projects" "url" "/projects/" "active" true)
-    (dict "label" "Sitemap" "placeholder" true)
-  )
-  (slice
-    (dict "label" "Publications" "placeholder" true)
-    (dict "label" "Events" "placeholder" true)
-    (dict "label" "News" "placeholder" true)
-    (dict "label" "Team" "url" "/about/team/")
-  )
-  (slice
-    (dict "label" "Privacy Policy" "placeholder" true)
-    (dict "label" "Terms of Use" "placeholder" true)
-    (dict "label" "Cookie Policy" "placeholder" true)
-  )
-  (slice
-    (dict "label" "Accessibility Statement" "placeholder" true)
-    (dict "label" "Funding" "url" "/about/funding/")
-    (dict "label" "Legal Notice" "placeholder" true)
-  )
-}}
-{{ $socialLinks := slice
-  (dict "label" "International Brain Laboratory on GitHub" "url" "https://github.com/int-brain-lab/" "icon" "svg/icon_social_github.svg" "width" 47 "height" 45)
-  (dict "label" "International Brain Laboratory on YouTube" "url" "https://www.youtube.com/@intbrainlab" "icon" "svg/icon_social_youtube.svg" "width" 47 "height" 45)
-  (dict "label" "International Brain Laboratory on X" "url" "https://x.com/intbrainlab" "icon" "svg/icon_social_x.svg" "width" 47 "height" 45)
-}}
-{{ $legalLinks := slice
-  (dict "label" "Privacy Policy" "placeholder" true)
-  (dict "label" "Terms of Use" "placeholder" true)
-  (dict "label" "Cookie Policy" "placeholder" true)
-  (dict "label" "Accessibility" "placeholder" true)
-  (dict "label" "Funding Acknowledgement" "placeholder" true)
-  (dict "label" "Contact" "url" "/about/contact/")
-}}
+{{ $footerData := site.Data.footer }}
 <footer class="site-footer site-footer--{{ $footerVariant }}">
   <div class="site-footer__primary">
     <div class="shell site-footer__inner">
@@ -44,9 +8,9 @@
       </a>
 
       <nav class="site-footer__nav" aria-label="Footer">
-        {{ range $footerColumns }}
+        {{ range $footerData.columns }}
           <ul class="site-footer__nav-column">
-            {{ range . }}
+            {{ range .links }}
               <li>
                 <a
                   class="site-footer__nav-link{{ if .active }} site-footer__nav-link--active{{ end }}{{ if .placeholder }} site-footer__nav-link--placeholder{{ end }}"
@@ -58,7 +22,7 @@
         {{ end }}
 
         <div class="site-footer__social" aria-label="International Brain Laboratory social links">
-          {{ range $socialLinks }}
+          {{ range $footerData.social_links }}
             <a class="site-footer__social-link" href="{{ .url }}" target="_blank" rel="noreferrer" aria-label="{{ .label }}">
               <img src="{{ (resources.Get .icon).RelPermalink }}" alt="" width="{{ .width }}" height="{{ .height }}">
             </a>
@@ -81,7 +45,7 @@
       </p>
 
       <nav class="site-footer__legal-nav" aria-label="Legal and policy links">
-        {{ range $legalLinks }}
+        {{ range $footerData.legal_links }}
           <a href="{{ if .placeholder }}#{{ else }}{{ .url | relURL }}{{ end }}"{{ if .placeholder }} aria-disabled="true" title="Temporary placeholder link"{{ end }}>{{ .label }}</a>
         {{ end }}
       </nav>

@@ -1,7 +1,7 @@
 .page-faq {
   position: relative;
-  background: #06264b;
-  color: #ffffff;
+  background: var(--color-page-dark);
+  color: var(--color-surface);
 }
 
 .page-faq::before {
@@ -10,7 +10,7 @@
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(180deg, rgba(2, 18, 45, 0.2) 0%, rgba(2, 18, 45, 0.42) 100%),
+    linear-gradient(180deg, var(--color-page-overlay-top) 0%, var(--color-page-overlay-bottom) 100%),
     url("/images/faq-background.webp") center top / cover no-repeat;
 }
 
@@ -19,7 +19,7 @@
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(1, 16, 39, 0.08) 0%, rgba(1, 16, 39, 0.22) 100%);
+  background: linear-gradient(180deg, var(--color-page-overlay-soft-top) 0%, var(--color-page-overlay-soft-bottom) 100%);
 }
 
 .page-faq .site-footer {
@@ -52,11 +52,11 @@
 }
 
 .faq-group--base .faq-group__panel {
-  background: rgba(0, 77, 137, 0.40);
+  background: var(--faq-surface-dark);
 }
 
 .faq-group--alt .faq-group__panel {
-  background: rgba(0, 159, 215, 0.50);
+  background: var(--faq-surface-light);
 }
 
 .faq-group__header {
@@ -65,7 +65,7 @@
 
 .faq-group__header h2 {
   margin: 0;
-  color: #ffffff;
+  color: var(--color-surface);
   font-size: var(--faq-title-size);
   line-height: 1.02;
   font-weight: 400;
@@ -79,12 +79,12 @@
 .faq-item {
   padding: 1.45rem 1.45rem 1.4rem;
   border-radius: 0.6rem;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .faq-item__question {
   margin: 0 0 0.7rem;
-  color: #004d89;
+  color: var(--color-accent);
   font-size: var(--faq-question-size);
   line-height: 1.08;
   font-weight: 400;
@@ -93,7 +93,7 @@
 .faq-item__answer,
 .faq-item__answer p {
   margin: 0;
-  color: #009fd7;
+  color: var(--color-accent-soft);
   font-size: var(--faq-answer-size);
   line-height: 1.28;
 }

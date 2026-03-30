@@ -1,33 +1,7 @@
 {{ $section := .Section }}
 {{ $pagePath := .RelPermalink }}
 {{ $headerVariant := .Params.header_variant | default "non-landing" }}
-{{ $menuItems := slice
-  (dict
-    "title" "About"
-    "url" "/about/"
-    "active" (and (eq $section "about") (ne $pagePath "/about/contact/"))
-    "children" (slice
-      (dict "title" "Who We Are" "url" "/about/" "active" (eq $pagePath "/about/"))
-      (dict "title" "The Team" "url" "/about/team/" "active" (eq $pagePath "/about/team/"))
-      (dict "title" "FAQ" "url" "/about/faq/" "active" (eq $pagePath "/about/faq/"))
-      (dict "title" "Funding" "url" "/about/funding/" "active" (eq $pagePath "/about/funding/"))
-    )
-  )
-  (dict "title" "Resources" "url" "#" "disabled" true)
-  (dict
-    "title" "Projects"
-    "url" "/projects/"
-    "active" (eq $section "projects")
-    "children" (slice
-      (dict "title" "Ongoing Projects" "url" "/projects/#ibl-research-projects" "active" (or (eq $pagePath "/projects/") (hasPrefix $pagePath "/projects/descriptions/")))
-      (dict "title" "New Partner Projects" "url" "/new-partner-projects/" "active" (eq $pagePath "/new-partner-projects/"))
-    )
-  )
-  (dict "title" "Publications" "url" "#" "disabled" true)
-  (dict "title" "Events" "url" "#" "disabled" true)
-  (dict "title" "Contact" "url" "/about/contact/" "active" (eq $pagePath "/about/contact/"))
-  (dict "title" "News" "url" "#" "disabled" true)
-}}
+{{ $menuItems := site.Data.navigation.header }}
 <header class="site-header site-header--{{ $headerVariant }}">
   <div class="shell site-header__inner">
     <a class="site-brand" href="{{ "/" | relURL }}">
@@ -49,13 +23,22 @@
           {{ $item := . }}
           {{ $children := $item.children | default (slice) }}
           {{ $hasChildren := gt (len $children) 0 }}
+          {{ $itemActive := false }}
+          {{ if eq $item.key "about" }}
+            {{ $itemActive = and (eq $section "about") (ne $pagePath "/about/contact/") }}
+          {{ else if eq $item.key "projects" }}
+            {{ $itemActive = eq $section "projects" }}
+          {{ else if eq $item.key "contact" }}
+            {{ $itemActive = eq $pagePath "/about/contact/" }}
+          {{ end }}
           <li class="site-nav__item{{ if $hasChildren }} site-nav__item--has-children{{ end }}">
-            <a class="site-nav__link{{ if $hasChildren }} site-nav__link--has-children{{ end }}" href="{{ if $item.disabled }}#{{ else }}{{ $item.url | relURL }}{{ end }}"{{ if $item.active }} aria-current="page"{{ end }}{{ if $item.disabled }} aria-disabled="true" title="Temporary placeholder link"{{ end }}>{{ $item.title }}</a>
+            <a class="site-nav__link{{ if $hasChildren }} site-nav__link--has-children{{ end }}" href="{{ if $item.disabled }}#{{ else }}{{ $item.url | relURL }}{{ end }}"{{ if $itemActive }} aria-current="page"{{ end }}{{ if $item.disabled }} aria-disabled="true" title="Temporary placeholder link"{{ end }}>{{ $item.title }}</a>
             {{ if $hasChildren }}
-              <ul class="site-nav__submenu" aria-label="{{ .title }} submenu">
+              <ul class="site-nav__submenu" aria-label="{{ $item.title }} submenu">
                 {{ range $children }}
+                  {{ $childActive := or (eq $pagePath .url) (and (eq .title "Ongoing Projects") (or (eq $pagePath "/projects/") (hasPrefix $pagePath "/projects/descriptions/"))) }}
                   <li>
-                    <a href="{{ .url | relURL }}"{{ if .active }} aria-current="page"{{ end }}>{{ .title }}</a>
+                    <a href="{{ .url | relURL }}"{{ if $childActive }} aria-current="page"{{ end }}>{{ .title }}</a>
                   </li>
                 {{ end }}
               </ul>

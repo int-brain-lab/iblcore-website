@@ -1,7 +1,7 @@
 .page-new-partners {
   position: relative;
-  background: #06264b;
-  color: #ffffff;
+  background: var(--color-page-dark);
+  color: var(--color-surface);
 }
 
 .page-new-partners::before {
@@ -10,9 +10,9 @@
   inset: 0;
   z-index: -2;
   background:
-    linear-gradient(180deg, rgba(2, 18, 45, 0.2) 0%, rgba(2, 18, 45, 0.42) 100%),
+    linear-gradient(180deg, var(--color-page-overlay-top) 0%, var(--color-page-overlay-bottom) 100%),
     url("/images/new-partners-background.webp") center top / contain no-repeat;
-  background-color: #06264b;
+  background-color: var(--color-page-dark);
 }
 
 .page-new-partners::after {
@@ -20,7 +20,7 @@
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, rgba(1, 16, 39, 0.08) 0%, rgba(1, 16, 39, 0.22) 100%);
+  background: linear-gradient(180deg, var(--color-page-overlay-soft-top) 0%, var(--color-page-overlay-soft-bottom) 100%);
 }
 
 .page-new-partners .site-footer {
@@ -29,14 +29,14 @@
 }
 
 .new-partners-banner {
-  background: #009fd7;
+  background: var(--color-accent-soft);
 }
 
 .new-partners-section {
   position: relative;
   z-index: 1;
   padding: 3rem 0 4rem;
-  background: #004d89;
+  background: var(--color-accent);
 }
 
 .new-partners-affiliates__header {
@@ -45,7 +45,7 @@
 
 .new-partners-affiliates__header h2 {
   margin: 0;
-  color: #004d89;
+  color: var(--color-accent);
   font-size: var(--faq-title-size);
   line-height: 1.02;
   font-weight: 400;
@@ -59,12 +59,12 @@
 .new-partners-card {
   padding: 1.5rem;
   border-radius: 0.85rem;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .new-partners-card__authors {
   margin: 0 0 0.4rem;
-  color: #009fd7;
+  color: var(--color-accent-soft);
   font-size: var(--faq-answer-size);
   line-height: 1.1;
   font-weight: 400;
@@ -73,7 +73,7 @@
 
 .new-partners-card h3 {
   margin: 0 0 0.85rem;
-  color: #004d89;
+  color: var(--color-accent);
   font-size: var(--faq-question-size);
   line-height: 1.08;
   font-weight: 400;
@@ -82,7 +82,7 @@
 .new-partners-card__body,
 .new-partners-card__body p,
 .new-partners-card__body li {
-  color: #009fd7;
+  color: var(--color-accent-soft);
   font-size: var(--faq-answer-size);
   line-height: 1.28;
 }
@@ -99,11 +99,11 @@
   position: relative;
   z-index: 1;
   padding: 2.5rem 0;
-  background: #ffffff;
+  background: var(--color-surface);
 }
 
 .new-partners-affiliates__header h2 {
-  color: #004d89;
+  color: var(--color-accent);
 }
 
 .new-partners-affiliates__list {
@@ -111,14 +111,14 @@
   flex-wrap: wrap;
   gap: 0.65rem 1rem;
   margin-top: 1.5rem;
-  color: #004d89;
+  color: var(--color-accent);
   font-size: calc(var(--faq-answer-size) * 1.15);
   line-height: 1.3;
 }
 
 .new-partners-affiliates__list span,
 .new-partners-affiliates__list span::after {
-  color: #004d89;
+  color: var(--color-accent);
 }
 
 .new-partners-affiliates__list span:not(:last-child)::after {
@@ -129,7 +129,7 @@
 .new-partners-affiliates-banner {
   position: relative;
   z-index: 1;
-  background: #009fd7;
+  background: var(--color-accent-soft);
 }
 
 @media (max-width: 900px) {
