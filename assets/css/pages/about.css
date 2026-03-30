@@ -5,7 +5,7 @@
 
 .about-hero {
   position: relative;
-  min-height: 41rem;
+  min-height: var(--hero-min-height-about);
   padding: 0;
   background: var(--color-about-hero-bg);
   overflow: hidden;
@@ -37,7 +37,7 @@
   z-index: 1;
   display: flex;
   align-items: flex-end;
-  min-height: 41rem;
+  min-height: var(--hero-min-height-about);
   padding-bottom: 1.7rem;
 }
 
@@ -85,7 +85,7 @@
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
-  margin-bottom: 1.15rem;
+  margin-bottom: var(--space-panel-xl);
 }
 
 .about-section__header h2 {
@@ -191,7 +191,7 @@
 }
 
 .about-mission-card h3 {
-  margin: 1rem 0 1.55rem;
+  margin: var(--space-md) 0 1.55rem;
   color: var(--color-surface);
   font-size: calc(var(--font-size-page-copy) * var(--font-ratio-title-to-copy));
   line-height: 1.02;
@@ -261,7 +261,7 @@
 
   .about-hero,
   .about-hero__inner {
-    min-height: 28rem;
+    min-height: var(--hero-min-height-about-md);
   }
 
   .about-hero__inner {
@@ -273,7 +273,7 @@
 
   .about-hero,
   .about-hero__inner {
-    min-height: 23rem;
+    min-height: var(--hero-min-height-about-sm);
   }
 
   .about-section__header {

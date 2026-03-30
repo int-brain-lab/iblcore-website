@@ -62,8 +62,8 @@
 
 .page-controller__links {
   display: grid;
-  gap: 0.35rem;
-  padding: 0.35rem;
+  gap: var(--space-panel-sm);
+  padding: var(--space-panel-sm);
   border-radius: 999px;
   background: var(--color-controller-bg);
   box-shadow: 0 10px 24px var(--color-shadow-soft);

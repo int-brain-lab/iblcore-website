@@ -11,7 +11,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2.5rem;
+  gap: var(--layout-gap-loose);
   padding: 2.9rem 0 3.1rem;
 }
 
@@ -74,7 +74,7 @@
 .site-footer__social {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-md);
   grid-column: 3;
   margin-top: -4.55rem;
 }

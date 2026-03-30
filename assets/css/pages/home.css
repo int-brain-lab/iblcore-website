@@ -19,7 +19,7 @@
 
 .hero__panel {
   position: relative;
-  min-height: 46rem;
+  min-height: var(--hero-min-height-home);
   background: var(--color-home-hero-panel);
 }
 
@@ -85,14 +85,14 @@
 .landing-band__inner {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.35rem;
+  gap: var(--space-panel-2xl);
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 0 1.15rem;
+  padding: var(--space-panel-xl) 0 var(--space-panel-2xl);
 }
 
 .landing-band--intro .landing-band__inner {
-  padding: 2rem 0 1.95rem;
+  padding: var(--space-xl) 0 1.95rem;
 }
 
 .landing-band__copy {
@@ -140,7 +140,7 @@
 .what-we-do__grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 2.2rem 1.35rem;
+  gap: 2.2rem var(--space-panel-2xl);
 }
 
 .what-we-do__item {
@@ -173,7 +173,7 @@
 }
 
 .what-we-do__body h3 {
-  margin: 0 0 0.55rem;
+  margin: 0 0 var(--space-panel-md);
   color: var(--color-accent-soft);
   font-size: var(--font-size-card-title);
   line-height: 1;
@@ -196,7 +196,7 @@
 .button--landing {
   align-self: flex-start;
   flex: 0 0 auto;
-  min-width: 7.3rem;
+  min-width: var(--button-width-landing);
   padding-left: 0.74rem;
   padding-right: 0.74rem;
   box-shadow: inset 0 0 0 1px var(--color-button-inset-light);
@@ -217,7 +217,7 @@
   align-items: flex-start;
   justify-content: space-between;
   gap: 0.9rem;
-  padding: 1.5rem 0 1.35rem;
+  padding: var(--space-panel-3xl) 0 var(--space-panel-2xl);
 }
 
 .support-section__heading {
@@ -246,7 +246,7 @@
 }
 
 .button--support {
-  min-width: 11.5rem;
+  min-width: var(--button-width-support);
   padding-left: 0.55rem;
   padding-right: 0.55rem;
 }
@@ -283,7 +283,7 @@
 
 @media (max-width: 900px) {
   .hero__panel {
-    min-height: 34rem;
+    min-height: var(--hero-min-height-home-md);
   }
 }
 
@@ -293,7 +293,7 @@
   }
 
   .hero__panel {
-    min-height: 30rem;
+    min-height: var(--hero-min-height-home-sm);
   }
 
   .hero__content {
@@ -340,7 +340,7 @@
   }
 
   .what-we-do__grid {
-    gap: 1.35rem;
+    gap: var(--space-panel-2xl);
   }
 
   .what-we-do__item {

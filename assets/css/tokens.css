@@ -92,6 +92,14 @@
   --space-xl: 2rem;
   --space-2xl: 3rem;
   --space-3xl: 5rem;
+  --space-panel-xs: 0.15rem;
+  --space-panel-sm: 0.35rem;
+  --space-panel-md: 0.55rem;
+  --space-panel-lg: 0.85rem;
+  --space-panel-xl: 1.15rem;
+  --space-panel-2xl: 1.35rem;
+  --space-panel-3xl: 1.5rem;
+  --space-panel-4xl: 2.25rem;
 
   /* Layout */
   --shell-width: 1280px;
@@ -102,6 +110,8 @@
   --content-width-panel-copy: 1207px;
   --content-inset-panel-x: 50px;
   --content-gap-cta: 66px;
+  --layout-gap-loose: 2.5rem;
+  --layout-gap-grid: 1.25rem;
 
   /* Page-specific layout helpers */
   --about-intro-pad-top: 60px;
@@ -111,6 +121,14 @@
   --button-pill-width-sm: 174px;
   --button-pill-height-lg: 67px;
   --controller-top-offset: 10.5rem;
+  --hero-min-height-home: 46rem;
+  --hero-min-height-home-md: 34rem;
+  --hero-min-height-home-sm: 30rem;
+  --hero-min-height-about: 41rem;
+  --hero-min-height-about-md: 28rem;
+  --hero-min-height-about-sm: 23rem;
+  --button-width-support: 11.5rem;
+  --button-width-landing: 7.3rem;
   --faq-hero-min-height: 32rem;
   --faq-group-gap: 2.5rem;
   --faq-group-pad-y: 2.15rem;

@@ -95,7 +95,7 @@
 
 :is(.project-cards, .new-partners-cards) {
   display: grid;
-  gap: 1.25rem;
+  gap: var(--layout-gap-grid);
 }
 
 :is(.project-card, .new-partners-card) {
