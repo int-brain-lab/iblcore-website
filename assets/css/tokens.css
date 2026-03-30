@@ -100,6 +100,19 @@
   --space-panel-2xl: 1.35rem;
   --space-panel-3xl: 1.5rem;
   --space-panel-4xl: 2.25rem;
+  --space-panel-5xl: 3rem;
+  --space-panel-6xl: 4rem;
+  --space-panel-7xl: 4.5rem;
+  --space-text-xs: 0.45rem;
+  --space-text-sm: 0.5rem;
+  --space-text-md: 0.7rem;
+  --space-text-lg: 0.8rem;
+  --space-text-xl: 0.95rem;
+  --space-text-2xl: 1.1rem;
+  --space-text-3xl: 1.5rem;
+  --space-text-4xl: 1.75rem;
+  --space-text-5xl: 2rem;
+  --space-text-6xl: 2.8rem;
 
   /* Layout */
   --shell-width: 1280px;
@@ -129,6 +142,20 @@
   --hero-min-height-about-sm: 23rem;
   --button-width-support: 11.5rem;
   --button-width-landing: 7.3rem;
+  --hero-content-pad-top-home: 18.9rem;
+  --hero-content-pad-bottom-home: 11.4rem;
+  --hero-content-pad-top-section: 12rem;
+  --hero-content-pad-top-section-md: 9rem;
+  --hero-content-pad-top-section-sm: 7.5rem;
+  --hero-content-pad-top-shared-sm: 8.5rem;
+  --hero-content-pad-top-shared-md: 10rem;
+  --hero-content-pad-bottom-section: 2.15rem;
+  --hero-content-pad-bottom-section-md: 1.5rem;
+  --hero-content-pad-bottom-section-sm: 1.2rem;
+  --hero-content-pad-bottom-home-sm: 0;
+  --hero-copy-max-width: 44rem;
+  --section-banner-pad-y: 2.25rem;
+  --section-banner-pad-y-sm: 1.5rem;
   --faq-hero-min-height: 32rem;
   --faq-group-gap: 2.5rem;
   --faq-group-pad-y: 2.15rem;

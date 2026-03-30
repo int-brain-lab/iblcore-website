@@ -26,12 +26,12 @@
   display: flex;
   align-items: flex-end;
   min-height: 32rem;
-  padding-top: 12rem;
-  padding-bottom: 2.15rem;
+  padding-top: var(--hero-content-pad-top-section);
+  padding-bottom: var(--hero-content-pad-bottom-section);
 }
 
 .section-hero__copy {
-  max-width: 44rem;
+  max-width: var(--hero-copy-max-width);
 }
 
 .section-hero h1 {
@@ -48,8 +48,8 @@
 }
 
 .section-banner__inner {
-  padding-top: 2.25rem;
-  padding-bottom: 2.25rem;
+  padding-top: var(--section-banner-pad-y);
+  padding-bottom: var(--section-banner-pad-y);
 }
 
 .section-banner__copy,
@@ -99,8 +99,8 @@
 }
 
 :is(.project-card, .new-partners-card) {
-  padding: 1.5rem;
-  border-radius: 0.85rem;
+  padding: var(--space-panel-3xl);
+  border-radius: var(--space-panel-lg);
 }
 
 @media (max-width: 760px) {
@@ -110,8 +110,8 @@
   }
 
   .section-hero__inner {
-    padding-top: 9rem;
-    padding-bottom: 1.5rem;
+    padding-top: var(--hero-content-pad-top-section-md);
+    padding-bottom: var(--hero-content-pad-bottom-section-md);
   }
 }
 
@@ -122,23 +122,23 @@
   }
 
   .section-hero__inner {
-    padding-top: 7.5rem;
-    padding-bottom: 1.2rem;
+    padding-top: var(--hero-content-pad-top-section-sm);
+    padding-bottom: var(--hero-content-pad-bottom-section-sm);
   }
 
   .section-banner__inner {
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: var(--section-banner-pad-y-sm);
+    padding-bottom: var(--section-banner-pad-y-sm);
   }
 
   :is(.project-card, .new-partners-card) {
-    padding: 1rem;
+    padding: var(--space-md);
   }
 }
 
 @media (max-width: 900px) {
   :is(.faq-hero__inner, .projects-hero__inner, .new-partners-hero__inner) {
-    padding-top: 10rem;
+    padding-top: var(--hero-content-pad-top-shared-md);
   }
 }
 
@@ -149,7 +149,7 @@
   }
 
   :is(.faq-hero__inner, .projects-hero__inner, .new-partners-hero__inner) {
-    padding-top: 8.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: var(--hero-content-pad-top-shared-sm);
+    padding-bottom: var(--hero-content-pad-bottom-section-md);
   }
 }

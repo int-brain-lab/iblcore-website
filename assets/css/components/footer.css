@@ -108,7 +108,7 @@
 
 .site-footer__legal-inner {
   display: grid;
-  gap: 1.35rem;
+  gap: var(--space-panel-2xl);
   justify-items: center;
   padding: 2.5rem 0 2.8rem;
   text-align: center;
@@ -144,7 +144,7 @@
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
-  gap: 0.4rem 0.7rem;
+  gap: 0.4rem var(--space-text-md);
 }
 
 .site-footer__legal-nav a {
@@ -157,7 +157,7 @@
 
 .site-footer__legal-nav a + a::before {
   content: "|";
-  margin-right: 0.7rem;
+  margin-right: var(--space-text-md);
 }
 
 .page-home .site-footer {
